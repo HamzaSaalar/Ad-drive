@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		884E63C5285F5F6300D1A075 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E63C4285F5F6300D1A075 /* CustomButton.swift */; };
+		884E63C82860622000D1A075 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E63C72860622000D1A075 /* DetailViewController.swift */; };
+		884E63CA2860786F00D1A075 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E63C92860786F00D1A075 /* SettingViewController.swift */; };
 		8878B1B1284762D6008AD11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878B1B0284762D6008AD11D /* AppDelegate.swift */; };
 		8878B1B3284762D6008AD11D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878B1B2284762D6008AD11D /* SceneDelegate.swift */; };
 		8878B1B5284762D6008AD11D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878B1B4284762D6008AD11D /* ViewController.swift */; };
@@ -80,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		884E63C4285F5F6300D1A075 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		884E63C72860622000D1A075 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		884E63C92860786F00D1A075 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8878B1AD284762D6008AD11D /* Ad-Drive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad-Drive.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8878B1B0284762D6008AD11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8878B1B2284762D6008AD11D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				8878B1B4284762D6008AD11D /* ViewController.swift */,
 				88895BAF285B182500646011 /* ConditionsViewController.swift */,
 				88AF8860285DF1E20035B0C6 /* LoginViewController.swift */,
+				884E63C72860622000D1A075 /* DetailViewController.swift */,
+				884E63C92860786F00D1A075 /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -489,12 +495,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8878B1E928479151008AD11D /* File.swift in Sources */,
+				884E63CA2860786F00D1A075 /* SettingViewController.swift in Sources */,
 				88895B272859E81200646011 /* DriverConditionsTableViewCell.swift in Sources */,
 				884E63C5285F5F6300D1A075 /* CustomButton.swift in Sources */,
 				8878B1B5284762D6008AD11D /* ViewController.swift in Sources */,
 				8878B1E3284763CD008AD11D /* CustomView.swift in Sources */,
 				88AF8861285DF1E20035B0C6 /* LoginViewController.swift in Sources */,
 				8878B1B1284762D6008AD11D /* AppDelegate.swift in Sources */,
+				884E63C82860622000D1A075 /* DetailViewController.swift in Sources */,
 				8878B1B3284762D6008AD11D /* SceneDelegate.swift in Sources */,
 				88895BB0285B182500646011 /* ConditionsViewController.swift in Sources */,
 			);
