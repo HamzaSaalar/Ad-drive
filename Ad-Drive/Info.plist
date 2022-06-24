@@ -6,19 +6,10 @@
 	<array>
 		<string></string>
 	</array>
-	<key>item 1</key>
-	<string>TTNorms-Bold.otf</string>
-	<key>item 0</key>
-	<string>TTNorms-Medium.otf
-TTNormsPro-Medium
-TTNormsPro-Medium
-TTNormsPro-Medium
-TTNormsPro-Medium
-TTNorms-Medium.otf</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
+		<true/>
 		<key>UISceneConfigurations</key>
 		<dict>
 			<key>UIWindowSceneSessionRoleApplication</key>
@@ -34,5 +25,18 @@ TTNorms-Medium.otf</string>
 			</array>
 		</dict>
 	</dict>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>item 0</key>
+	<string>TTNorms-Medium.otf
+TTNormsPro-Medium
+TTNormsPro-Medium
+TTNormsPro-Medium
+TTNormsPro-Medium
+TTNorms-Medium.otf</string>
+	<key>item 1</key>
+	<string>TTNorms-Bold.otf</string>
 </dict>
 </plist>
