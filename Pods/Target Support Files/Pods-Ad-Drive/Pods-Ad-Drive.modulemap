@@ -1,0 +1,6 @@
+framework module Pods_Ad_Drive {
+  umbrella header "Pods-Ad-Drive-umbrella.h"
+
+  export *
+  module * { export * }
+}

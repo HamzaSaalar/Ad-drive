@@ -257,6 +257,8 @@
 		8878B1AF284762D6008AD11D /* Ad-Drive */ = {
 			isa = PBXGroup;
 			children = (
+				CE27FC00286C77D900A01595 /* Service */,
+				CE27FBFF286C77D100A01595 /* Models */,
 				88798BE72865B7DB0037B2ED /* AppDelegate */,
 				88798BE62865B7C40037B2ED /* Assets */,
 				88798BE52865B6D80037B2ED /* Support */,
@@ -264,7 +266,6 @@
 				88895B242859E77600646011 /* GeneralTableViewCell */,
 				8878B1EA28479179008AD11D /* @IBDesignablle */,
 				8878B1E728479143008AD11D /* Extensions */,
-				8878B1E628478A0A008AD11D /* Models */,
 				8878B1E5284789A1008AD11D /* ViewController */,
 				8878B1E428478997008AD11D /* UI */,
 				8878B1B2284762D6008AD11D /* SceneDelegate.swift */,
@@ -314,13 +315,6 @@
 				880EB5D528644AF200AE058D /* AllowedAlertVC */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		8878B1E628478A0A008AD11D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		8878B1E728479143008AD11D /* Extensions */ = {
@@ -422,6 +416,20 @@
 				88895B9C285B0C2800646011 /* TT Norms Pro Thin.otf */,
 			);
 			path = "tt-norms-pro-cufonfonts";
+			sourceTree = "<group>";
+		};
+		CE27FBFF286C77D100A01595 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE27FC00286C77D900A01595 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D7F50DE484EA6BC739C6C5B9 /* Frameworks */ = {

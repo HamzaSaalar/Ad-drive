@@ -1,0 +1,6 @@
+framework module Pods_Ad_Drive_Ad_DriveUITests {
+  umbrella header "Pods-Ad-Drive-Ad-DriveUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
