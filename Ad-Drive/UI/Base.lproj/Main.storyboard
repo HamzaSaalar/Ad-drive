@@ -3448,6 +3448,9 @@ addrive2022</string>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                                <connections>
+                                                                    <action selector="thirdButtonPressed:" destination="9u0-WK-LJy" eventType="touchUpInside" id="YIS-Bg-DbO"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3479,6 +3482,9 @@ addrive2022</string>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                                <connections>
+                                                                    <action selector="secondButtonPressed:" destination="9u0-WK-LJy" eventType="touchUpInside" id="OZm-TH-O2M"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3505,6 +3511,9 @@ addrive2022</string>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                                <connections>
+                                                                    <action selector="fourthButtonPressed:" destination="9u0-WK-LJy" eventType="touchUpInside" id="vPu-Vf-zSH"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3593,6 +3602,10 @@ addrive2022</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstImage" destination="jRv-cz-mKZ" id="aqW-16-PUi"/>
+                        <outlet property="fourthImage" destination="gRu-Uo-dP3" id="vjC-L7-CwO"/>
+                        <outlet property="secondImage" destination="1SL-4E-ii7" id="0br-JX-l38"/>
+                        <outlet property="thirdImage" destination="OIs-70-CYU" id="HRA-Fw-Wgv"/>
                         <outlet property="titleLabel" destination="ux5-n3-uJb" id="wzz-8P-f9T"/>
                     </connections>
                 </viewController>
