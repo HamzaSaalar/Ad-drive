@@ -75,6 +75,8 @@
 		88895BAE285B0C2800646011 /* TT Norms Pro Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 88895B9C285B0C2800646011 /* TT Norms Pro Thin.otf */; };
 		88895BB0285B182500646011 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88895BAF285B182500646011 /* ConditionsViewController.swift */; };
 		88AF8861285DF1E20035B0C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF8860285DF1E20035B0C6 /* LoginViewController.swift */; };
+		CE27FC02286C79DC00A01595 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27FC01286C79DC00A01595 /* ApiService.swift */; };
+		CE27FC04286C7A1A00A01595 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27FC03286C7A1A00A01595 /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,8 @@
 		88AF8860285DF1E20035B0C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B9B99967ADCB646972F4BAAC /* Pods-Ad-Drive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-Drive.debug.xcconfig"; path = "Target Support Files/Pods-Ad-Drive/Pods-Ad-Drive.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2E76E820C1A866A408C911 /* Pods-Ad-Drive-Ad-DriveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-Drive-Ad-DriveUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ad-Drive-Ad-DriveUITests/Pods-Ad-Drive-Ad-DriveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE27FC01286C79DC00A01595 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CE27FC03286C7A1A00A01595 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		D21496A6047D067D94823DF7 /* Pods-Ad-DriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.debug.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC77DAB9AC96B773B98158D7 /* Pods-Ad-DriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.release.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -428,6 +432,8 @@
 		CE27FC00286C77D900A01595 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CE27FC01286C79DC00A01595 /* ApiService.swift */,
+				CE27FC03286C7A1A00A01595 /* Endpoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -738,11 +744,13 @@
 				88895B272859E81200646011 /* DriverConditionsTableViewCell.swift in Sources */,
 				884E63C5285F5F6300D1A075 /* CustomButton.swift in Sources */,
 				880EB5DA28646EDA00AE058D /* RegistrationVC.swift in Sources */,
+				CE27FC02286C79DC00A01595 /* ApiService.swift in Sources */,
 				8878B1B5284762D6008AD11D /* SplashVC.swift in Sources */,
 				88798BE42865984E0037B2ED /* TabBarVC.swift in Sources */,
 				8828838228632E8000F7E3C8 /* GalleryViewController.swift in Sources */,
 				8878B1E3284763CD008AD11D /* CustomView.swift in Sources */,
 				8828837F286249EA00F7E3C8 /* ImagesViewController.swift in Sources */,
+				CE27FC04286C7A1A00A01595 /* Endpoints.swift in Sources */,
 				88AF8861285DF1E20035B0C6 /* LoginViewController.swift in Sources */,
 				8878B1B1284762D6008AD11D /* AppDelegate.swift in Sources */,
 				880EB5D428644ACA00AE058D /* AllowLocationServicesVC.swift in Sources */,
