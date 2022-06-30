@@ -13,5 +13,5 @@ class Endpoints {
     
     static let login = "http://ad-drive.co.nz/ad-drive/api/auth/driver/login"
     static let imageURL = "http://"
-    
+    static let register = "http://ad-drive.co.nz/ad-drive/api/auth/register/drive"
 }

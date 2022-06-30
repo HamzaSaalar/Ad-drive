@@ -1669,10 +1669,10 @@ addrive2022</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wLh-i8-Eks">
-                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXR-Vj-icZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="xe5-3i-j1G">
                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -1683,7 +1683,7 @@ addrive2022</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsS-nx-yfn">
-                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1702,14 +1702,14 @@ addrive2022</string>
                                                                 </constraints>
                                                             </view>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxD-Vb-H6E">
-                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="150" id="D1s-nk-Ydl"/>
+                                                            <constraint firstAttribute="width" constant="250" id="D1s-nk-Ydl"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -1730,10 +1730,10 @@ addrive2022</string>
                                                 <rect key="frame" x="0.0" y="76" width="319" height="60"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DRC-bY-q9Y">
-                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9A-dtU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unlocked" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-lj-b9L">
                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -1744,7 +1744,7 @@ addrive2022</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhw-70-aPo">
-                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1763,14 +1763,14 @@ addrive2022</string>
                                                                 </constraints>
                                                             </view>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpM-TO-1Tx">
-                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="150" id="6gl-dg-A3I"/>
+                                                            <constraint firstAttribute="width" constant="250" id="6gl-dg-A3I"/>
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-hS-hWk">
@@ -1782,6 +1782,9 @@ addrive2022</string>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="showPasswordPressed:" destination="WZi-lz-uYr" eventType="touchUpInside" id="78r-JC-mLJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1886,6 +1889,11 @@ addrive2022</string>
                             <constraint firstItem="8Zt-U3-s2V" firstAttribute="leading" secondItem="ttc-6S-NDj" secondAttribute="leading" id="wOR-Wb-HAu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="qpM-TO-1Tx" id="jrg-ML-da1"/>
+                        <outlet property="showHideButton" destination="yjj-hS-hWk" id="O05-Lb-bSm"/>
+                        <outlet property="userNameField" destination="gxD-Vb-H6E" id="Ze2-Xx-1S0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="za1-yb-jiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1936,6 +1944,9 @@ addrive2022</string>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="tmq-g8-LRC" eventType="touchUpInside" id="VZH-Yu-8Y9"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need location services on to allow us to provide features like:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5o-1G-Wkn">
                                         <rect key="frame" x="24" y="130.5" width="316" height="81"/>
@@ -2519,6 +2530,9 @@ addrive2022</string>
                                                         <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="backButtonPressed:" destination="KRF-JS-qZM" eventType="touchUpInside" id="usm-At-UqZ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2582,10 +2596,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="onp-Nc-uU2">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7R-dZ-UYF">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="18"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="18"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="aqT-rX-wjD">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="18"/>
@@ -2596,7 +2610,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haD-Oe-pYj">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="18"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="18"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2615,14 +2629,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-r0-kP7">
-                                                                                <rect key="frame" x="0.0" y="26" width="150" height="18"/>
+                                                                                <rect key="frame" x="0.0" y="26" width="250" height="18"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="L1U-o6-eY1"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="L1U-o6-eY1"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -2643,10 +2657,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="76" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ABC-a8-Hbz">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hE2-N1-FXv">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-12-VEN">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -2657,7 +2671,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggw-9Y-eIB">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2676,14 +2690,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F0x-ie-MiP">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="0mm-cV-0Qk"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="0mm-cV-0Qk"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -2704,10 +2718,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="152" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9ir-ue-Tj1">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbv-WL-ahs">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-jb-Kf0">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -2720,7 +2734,7 @@ addrive2022</string>
                                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="thin"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvl-1O-Yb5">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2739,14 +2753,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCb-o9-Euc">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="QUJ-0z-eNq"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="QUJ-0z-eNq"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -2814,10 +2828,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-I0-yCR">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihK-l8-yef">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="q4X-Dh-XY5">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -2828,7 +2842,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-eP-Wij">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2847,14 +2861,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJP-kr-rzE">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="hhm-aD-URK"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="hhm-aD-URK"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -2875,10 +2889,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="76" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jzh-qp-e1b">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQT-tK-oN8">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unlocked" translatesAutoresizingMaskIntoConstraints="NO" id="tzA-Wm-clC">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -2889,7 +2903,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-OW-1Ng">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2908,25 +2922,28 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7C-f0-gJV">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="35O-hY-TWj"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="35O-hY-TWj"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkZ-5k-bD3">
-                                                                        <rect key="frame" x="288" y="35" width="5" height="5"/>
+                                                                        <rect key="frame" x="283" y="30" width="10" height="10"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="5" id="Z1W-WC-D4M"/>
-                                                                            <constraint firstAttribute="width" constant="5" id="j5J-Fn-Y6O"/>
+                                                                            <constraint firstAttribute="height" constant="10" id="Z1W-WC-D4M"/>
+                                                                            <constraint firstAttribute="width" constant="10" id="j5J-Fn-Y6O"/>
                                                                         </constraints>
                                                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="passwordSwitcher:" destination="KRF-JS-qZM" eventType="touchUpInside" id="OUd-CS-fww"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2948,10 +2965,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="152" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-ec-k1f">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e73-St-W1P">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unlocked" translatesAutoresizingMaskIntoConstraints="NO" id="PpY-Px-AJG">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -2962,7 +2979,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Varify Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpL-yJ-Q8f">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2981,14 +2998,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSN-S8-0fK">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="xT6-BG-N4b"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="xT6-BG-N4b"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLx-JM-vyc">
@@ -2999,7 +3016,10 @@ addrive2022</string>
                                                                         </constraints>
                                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="passwordSwitcherTwo:" destination="KRF-JS-qZM" eventType="touchUpInside" id="2pX-GX-7ow"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3068,10 +3088,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-JL-f4j">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j1-Uh-2DZ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auto_line" translatesAutoresizingMaskIntoConstraints="NO" id="6OG-vC-PLQ">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -3082,7 +3102,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy3-7T-zU3">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3101,14 +3121,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gf2-Ws-GfU">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="y85-sF-kug"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="y85-sF-kug"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -3129,10 +3149,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="76" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p6D-0l-e4W">
-                                                                        <rect key="frame" x="14" y="8" width="150" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtc-cR-fQf">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_front" translatesAutoresizingMaskIntoConstraints="NO" id="4Jq-Sh-vlx">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -3143,7 +3163,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntT-9s-k8D">
-                                                                                        <rect key="frame" x="29" y="0.0" width="121" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3162,14 +3182,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGA-Id-Juo">
-                                                                                <rect key="frame" x="0.0" y="22" width="150" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="DeG-Kt-w2R"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="DeG-Kt-w2R"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -3190,10 +3210,10 @@ addrive2022</string>
                                                                 <rect key="frame" x="0.0" y="152" width="319" height="60"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="A7L-Zh-ZIu">
-                                                                        <rect key="frame" x="14" y="8" width="170" height="44"/>
+                                                                        <rect key="frame" x="14" y="8" width="250" height="44"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-sq-qL9">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registration" translatesAutoresizingMaskIntoConstraints="NO" id="cAF-sJ-eRM">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -3204,7 +3224,7 @@ addrive2022</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9E-cy-WFx">
-                                                                                        <rect key="frame" x="29" y="0.0" width="141" height="22"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="221" height="22"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" name="TTNormsPro-Light" family="TT Norms Pro" pointSize="15"/>
                                                                                         <color key="textColor" red="0.98046889559999995" green="0.28353570210000001" blue="0.36778557020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3223,14 +3243,14 @@ addrive2022</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJ1-bx-mQI">
-                                                                                <rect key="frame" x="0.0" y="22" width="170" height="22"/>
+                                                                                <rect key="frame" x="0.0" y="22" width="250" height="22"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="170" id="bKd-tR-YKG"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="bKd-tR-YKG"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
@@ -3342,6 +3362,19 @@ addrive2022</string>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="createPasswordField" destination="P7C-f0-gJV" id="Ncp-92-3bz"/>
+                        <outlet property="createPasswordHidden" destination="WkZ-5k-bD3" id="tmc-Io-IbU"/>
+                        <outlet property="doBirthField" destination="zCb-o9-Euc" id="aq0-Rb-LgA"/>
+                        <outlet property="emailField" destination="gJP-kr-rzE" id="5Vb-0X-Ap8"/>
+                        <outlet property="firstNameField" destination="qBK-r0-kP7" id="OeQ-dT-KGY"/>
+                        <outlet property="lastNameField" destination="F0x-ie-MiP" id="xXd-vg-fmu"/>
+                        <outlet property="varifyPasswordField" destination="BSN-S8-0fK" id="Rqs-XP-b76"/>
+                        <outlet property="varifyPasswordHidden" destination="uLx-JM-vyc" id="o3E-Uk-eoF"/>
+                        <outlet property="vehicleMakeField" destination="gf2-Ws-GfU" id="PUI-OM-yd7"/>
+                        <outlet property="vehicleModelField" destination="vGA-Id-Juo" id="KWt-6t-BHJ"/>
+                        <outlet property="vehicleRegistrationField" destination="bJ1-bx-mQI" id="SQA-8T-NCB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnp-BX-iBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3384,7 +3417,7 @@ addrive2022</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZJ-14-FnV">
-                                        <rect key="frame" x="321" y="36" width="30" height="30"/>
+                                        <rect key="frame" x="321" y="47" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="R7b-iK-vYf"/>
                                             <constraint firstAttribute="width" constant="30" id="sID-Co-Xq0"/>
@@ -3560,7 +3593,6 @@ addrive2022</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="XKV-VV-zi3" firstAttribute="leading" secondItem="sVj-VR-NxP" secondAttribute="leading" constant="24" id="1oJ-q4-MxW"/>
-                                    <constraint firstItem="PZJ-14-FnV" firstAttribute="top" secondItem="sVj-VR-NxP" secondAttribute="top" constant="36" id="7EE-GZ-VZn"/>
                                     <constraint firstAttribute="trailing" secondItem="PZJ-14-FnV" secondAttribute="trailing" constant="24" id="7Re-tJ-35o"/>
                                     <constraint firstAttribute="bottom" secondItem="QV7-IK-cJ7" secondAttribute="bottom" constant="60" id="BFP-X1-JTm"/>
                                     <constraint firstAttribute="trailing" secondItem="QV7-IK-cJ7" secondAttribute="trailing" constant="70" id="McI-gv-WbF"/>
@@ -3571,6 +3603,7 @@ addrive2022</string>
                                     <constraint firstItem="QV7-IK-cJ7" firstAttribute="leading" secondItem="sVj-VR-NxP" secondAttribute="leading" constant="70" id="hJU-6p-u4M"/>
                                     <constraint firstItem="AqV-lf-mgh" firstAttribute="top" secondItem="zME-hY-AIX" secondAttribute="bottom" constant="38" id="hLv-Mh-BDM"/>
                                     <constraint firstItem="vzt-xd-DuK" firstAttribute="top" secondItem="XKV-VV-zi3" secondAttribute="bottom" constant="16" id="oaQ-Ie-qRV"/>
+                                    <constraint firstItem="PZJ-14-FnV" firstAttribute="centerY" secondItem="XKV-VV-zi3" secondAttribute="centerY" id="rfC-Fz-3B4"/>
                                     <constraint firstAttribute="trailing" secondItem="AqV-lf-mgh" secondAttribute="trailing" constant="60" id="wQ1-6h-dwI"/>
                                     <constraint firstItem="XKV-VV-zi3" firstAttribute="top" secondItem="sVj-VR-NxP" secondAttribute="top" constant="36" id="zhF-nn-CgA"/>
                                     <constraint firstItem="zME-hY-AIX" firstAttribute="leading" secondItem="sVj-VR-NxP" secondAttribute="leading" constant="24" id="zor-gK-51v"/>
@@ -3922,6 +3955,9 @@ addrive2022</string>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="0rU-kA-PXM" eventType="touchUpInside" id="DFX-Xx-gKI"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to use Motion and Fitness to allow us to provide features like:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vl-U9-yyJ">
                                         <rect key="frame" x="24" y="130.5" width="316" height="81"/>
@@ -4061,6 +4097,9 @@ addrive2022</string>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="eNT-To-D1o" eventType="touchUpInside" id="jhJ-p8-4eK"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to use Notifications to provide features like:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cM-ug-lcx">
                                         <rect key="frame" x="24" y="130.5" width="316" height="54"/>
@@ -4774,7 +4813,7 @@ addrive2022</string>
                                                                         </constraints>
                                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5170,12 +5209,11 @@ addrive2022</string>
         <image name="car_front" width="32" height="27"/>
         <image name="email" width="27" height="21"/>
         <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
         <image name="icon_awesome_check" width="57" height="42"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="person" width="27" height="38"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person" width="27" height="38"/>
         <image name="placeholderImage" width="422" height="475"/>
         <image name="rectangle_3" width="86" height="89"/>
         <image name="registration" width="32" height="20"/>

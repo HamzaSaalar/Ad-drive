@@ -9,19 +9,23 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+
 class ApiServices
 {
 
 //    static var headers = ["Authorization":"key=AAAAXmAuCFg:APA91bHyZycDmtvLe9VcdkKfFeZ7hrBdEbmkkECu9YLPGfL1iCfWm26jRDOvSbMb081p4MIqbQyuvOsJB4vjXlqdHIsyUi2V-iL-lhV1JHDo8Op7qxIlNTIz7vagZdgFUD16l4n3Inaz","Accept":"application/json","Content-Type": "application/json"]
     
-    static var headers = ["":""]
+    static var headers = [
+        "Content-Type": "application/json",
+    ]
     
     
    class func CalAPIResponse(url:String, param: [String:Any]?, method: HTTPMethod, completion: @escaping (JSON?, Bool?, Error?, Int?) -> Void) {
         
-        Alamofire.request(url, method: method, parameters: param, encoding: URLEncoding.httpBody, headers: nil).responseJSON { (response) in
+       Alamofire.request(url, method: method, parameters: param, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if response.result.isSuccess {
-                let responseJSON = JSON(response.result.value!)
+                let responseJSON = JSON(response.result.value as AnyObject?)
+               
                 return completion(responseJSON, true, nil,response.response?.statusCode)
             } else {
                 return completion(nil, false, response.error, response.response?.statusCode)

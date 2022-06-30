@@ -70,7 +70,7 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
     
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
         DispatchQueue.main.async {

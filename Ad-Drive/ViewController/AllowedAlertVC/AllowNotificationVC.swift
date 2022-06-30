@@ -30,6 +30,9 @@ class AllowNotificationVC: UIViewController {
     }
 
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         DispatchQueue.main.async {
             if let finishInformationVC : FinishInformationVC = FinishInformationVC.instantiateViewControllerFromStoryboard() {

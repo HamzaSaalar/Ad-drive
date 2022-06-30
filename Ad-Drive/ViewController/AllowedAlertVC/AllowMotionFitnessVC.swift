@@ -30,6 +30,9 @@ class AllowMotionFitnessVC: UIViewController {
         self.present(alert, animated: true)
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func nextButtonPressed(_ sender: Any) {
         DispatchQueue.main.async {
             if let allowNotificationVC : AllowNotificationVC = AllowNotificationVC.instantiateViewControllerFromStoryboard() {

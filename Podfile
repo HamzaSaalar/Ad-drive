@@ -11,7 +11,8 @@ target 'Ad-Drive' do
   pod 'Alamofire', '~> 4.7'
   pod 'SDWebImage'
   pod 'IQKeyboardManagerSwift'
-
+  pod 'AlamofireObjectMapper'
+  pod 'AlamofireNetworkActivityIndicator'
 
   target 'Ad-DriveTests' do
     inherit! :search_paths
