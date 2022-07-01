@@ -24,34 +24,13 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var vehicleModelField: UITextField!
     @IBOutlet weak var vehicleRegistrationField: UITextField!
     
-//    let mainObj = [
-//        "cars" : car,
-//        "bod" : "12-22",
-//        "driverNumber": "string",
-//        "driverToken": "string",
-//        "email": "string",
-//        "firstName": "string",
-//        "id": 0,
-//        "lastName": "string",
-//        "password": "string"
-//    ]
-//
-//    let car = [
-//        "model" : "11",
-//        "make" : "test"
-//    ]
-    
-    
-    let car = Car(id: 1, make: "", model: "test", registrationNumber: "1212")
     
     var reponseSend: responseModel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reponseSend =  responseModel(car: car, dob: doBirthField.text ?? "" , driverNumber: "dasd", driverToken: "asdad", email: "qasim@gmail.com", firstName: "Muhammad", id: 1, lastName: "qasim", password: "12345")
-
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -108,16 +87,31 @@ class RegistrationVC: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         if !(firstNameField.text?.isEmpty ?? false) || !(lastNameField.text?.isEmpty ?? false) || !(doBirthField.text?.isEmpty ?? false) || !(emailField.text?.isEmpty ?? false) || !(createPasswordField.text?.isEmpty ?? false) || !(varifyPasswordField.text?.isEmpty ?? false) {
-
+            
+            
+            
+            let carModel = Car(id: 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: "123444")
+            //yyyy-mm-dd
+            reponseSend =  responseModel(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: "hamza2@gmail.com", firstName: "Muhammad ", id: 0, lastName: "Hamza", password: "123456")
+            
+            
             ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post) { responseVaue, successval, errorval, statusCode in
                 
                 if successval ?? false {
-                    _ = responseVaue
+                     print(responseVaue)
                     if let responseHandler = Mapper<ResponseHandler>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil{
                                 if let register = Mapper<RegisterResponse>().map(JSONObject: responseHandler.data){
                                     print("User Email \(register.email)")
+                                    
+                                    UserDefaults.standard.set(register, forKey: "UserData")
+                                    
+                                    
+//                                    let value = UserDefaults.standard.value(forKey: "UserData") as? RegisterResponse
+//
+//                                    value?.email
+                                    
                                     
                                     DispatchQueue.main.async {
                                         if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
