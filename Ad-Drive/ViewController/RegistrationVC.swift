@@ -92,26 +92,31 @@ class RegistrationVC: UIViewController {
             
             let carModel = Car(id: 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: "123444")
             //yyyy-mm-dd
-            reponseSend =  responseModel(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: "hamza2@gmail.com", firstName: "Muhammad ", id: 0, lastName: "Hamza", password: "123456")
+            reponseSend =  responseModel(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
             
-            
+            print("register request : -> ", reponseSend as Any)
             ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post) { responseVaue, successval, errorval, statusCode in
                 
                 if successval ?? false {
-                     print(responseVaue)
+                    print(responseVaue as Any)
                     if let responseHandler = Mapper<ResponseHandler>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil{
                                 if let register = Mapper<RegisterResponse>().map(JSONObject: responseHandler.data){
-                                    print("User Email \(register.email)")
+                                    print("User Email \(register.email ?? "")")
                                     
-                                    UserDefaults.standard.set(register, forKey: "UserData")
-                                    
-                                    
-//                                    let value = UserDefaults.standard.value(forKey: "UserData") as? RegisterResponse
-//
-//                                    value?.email
-                                    
+                                    do {
+                                        let dataArchived = try NSKeyedArchiver.archivedData(withRootObject: register, requiringSecureCoding: false)
+                                        //NSKeyedArchiver.archivedData(withRootObject: register)
+                                        UserDefaults.standard.set(dataArchived, forKey: "UserData")
+                                        UserDefaults.standard.synchronize()
+                                        
+                                    } catch {
+                                        print("")
+                                    }
+                                    //UserDefaults.standard.set(register, forKey: "UserData")
+                                    //let value = UserDefaults.standard.value(forKey: "UserData") as? RegisterResponse
+                                    //value?.email
                                     
                                     DispatchQueue.main.async {
                                         if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {

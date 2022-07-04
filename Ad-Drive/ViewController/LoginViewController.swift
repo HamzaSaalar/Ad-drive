@@ -28,42 +28,45 @@ class LoginViewController: UIViewController {
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         
-        let email = "qasim"
-        let password = "123"
-        let type = "1"
-        
-        
-        let params = [
-            "email"         : email,
-            "password"      : password,
-            "type"          : type
-        ]
-        
-        
-        ApiServices.CalAPIResponse(url: Endpoints.login, param: params, method: .post) { responseVaue, successval, errorval, statusCode in
-            
-            if successval != nil {
-                print(responseVaue)
-                print("")
-                //responseVaue
-
-
-            } else {
-                print(errorval?.localizedDescription ?? "")
-            }
-            
-            
-        }
-        
-        
-        
-        
         DispatchQueue.main.async {
             if let registrationVC : RegistrationVC = RegistrationVC.instantiateViewControllerFromStoryboard() {
                 self.navigationController?.pushViewController(registrationVC, animated: true)
             }
         }
     }
+    
+    
+    @IBAction func actionSignin(_ sender: Any) {
+        
+        
+        if userNameField.text != "" || passwordField.text != "" {
+            
+            
+            let params = [
+                "email"         : self.userNameField.text ?? "",
+                "password"      : self.passwordField.text ?? "",
+                "type"          : "d"
+            ]
+            
+            
+            ApiServices.CalAPIResponse(url: Endpoints.login, param: params, method: .post) { responseVaue, successval, errorval, statusCode in
+                
+                if successval != nil {
+                    print(responseVaue as Any)
+
+                } else {
+                    print(errorval?.localizedDescription ?? "")
+                }
+            }
+
+        } else {
+            print("Please fill both the fields")
+        }
+        
+        
+        
+    }
+    
     
     
     @IBAction func showPasswordPressed(_ sender: Any) {

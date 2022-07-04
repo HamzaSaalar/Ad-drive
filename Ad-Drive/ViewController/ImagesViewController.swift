@@ -72,7 +72,43 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func nextButtonPressed(_ sender: Any) {
+    
+    
+    @IBAction func nextButtonPressed(_ sender: Any)
+    {
+        
+        if firstImage.image != UIImage.init(named: "placeholderImage") ||  secondImage.image != UIImage.init(named: "placeholderImage") || thirdImage.image  != UIImage.init(named: "placeholderImage") || fourthImage.image  != UIImage.init(named: "placeholderImage") {
+            
+            
+            let carid = "248"
+            let url = "http://ad-drive.co.nz/ad-drive/api/auth/upload/car/\(carid)"
+            
+            var imagesArray = [UIImage]()
+            
+            imagesArray.append(firstImage.image!)
+            imagesArray.append(secondImage.image!)
+            imagesArray.append(thirdImage.image!)
+            imagesArray.append(fourthImage.image!)
+            
+            
+            ApiServices.multiPartAPIRequest(url: url, param: nil, method: .post, photos: imagesArray, imageName: "files") { response, success, error, statusCode in
+                
+                if success ?? false {
+                    print(response as Any)
+                }
+            }
+            
+            
+            
+            
+        } else {
+            print("please select all four images")
+        }
+        
+        
+        
+        
+        
         DispatchQueue.main.async {
             if let allowLocationServicesVC : AllowLocationServicesVC = AllowLocationServicesVC.instantiateViewControllerFromStoryboard() {
                 self.navigationController?.pushViewController(allowLocationServicesVC, animated: true)
