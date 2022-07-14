@@ -24,7 +24,10 @@ class AllowLocationServicesVC: UIViewController {
     func showAlert(){
         let alert = UIAlertController(title: "Allow “Ad-Drive” to use your location?", message: "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(cAlertAction) in
+            //Redirect to Settings app
+            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+        }))
         alert.addAction(UIAlertAction(title: "Don't Allow", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)

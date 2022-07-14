@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class LoginViewController: UIViewController {
     
@@ -16,6 +17,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        userNameField.text = "qasim1@gmail.com"
+        passwordField.text = "123123123"
 
         // Do any additional setup after loading the view.
     }
@@ -54,6 +59,27 @@ class LoginViewController: UIViewController {
                 if successval != nil {
                     print(responseVaue as Any)
 
+                    if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: responseVaue?.rawValue) {
+                        
+                        do {
+                            let dataa = try responseVaue?.rawData()
+                            
+                            UserDefaults.standard.set(dataa!, forKey: "loginUser")
+                            
+                        } catch (let error) {
+                            print(error)
+                        }
+                        DataManager.shared.LoginResponse = dataobj
+                        
+                    }
+                    
+                    DispatchQueue.main.async {
+                        if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
+                            self.navigationController?.pushViewController(imagesViewController, animated: true)
+                        }
+                    }
+                    
+
                 } else {
                     print(errorval?.localizedDescription ?? "")
                 }
@@ -76,9 +102,10 @@ class LoginViewController: UIViewController {
             passwordField.isSecureTextEntry = true
         }
         if passwordField.isSecureTextEntry {
-            showHideButton.setImage(UIImage(systemName: "eye.slash") , for: .normal)
+//            showHideButton.setImage(UIImage(systemName: "eye.slash") , for: .normal)
+            showHideButton.setImage(UIImage.init(named: "eye.slash"), for: .normal)
         } else {
-            showHideButton.setImage(UIImage(systemName: "eye") , for: .normal)
+            showHideButton.setImage(UIImage.init(named: "eye"), for: .normal)
         }
     }
     

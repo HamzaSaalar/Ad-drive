@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9u0-WK-LJy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdO-CU-1CT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -96,7 +97,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="fgrsg"/>
                                                 <connections>
-                                                    <action selector="notificationPressed:" destination="o1S-CY-r2L" eventType="touchUpInside" id="p0d-Bo-ips"/>
+                                                    <action selector="ButtonNotificationPressed:" destination="Ot7-fN-jBe" eventType="touchUpInside" id="fPq-ee-ekG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -419,15 +420,26 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ww-7V-oFt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="285" height="60"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="ButtonOnDate:" destination="Ot7-fN-jBe" eventType="touchUpInside" id="7xY-mJ-gmg"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="1U5-EZ-fCq"/>
+                                                            <constraint firstItem="1Ww-7V-oFt" firstAttribute="leading" secondItem="aOk-lX-ZxI" secondAttribute="leading" id="8W4-KQ-ruO"/>
+                                                            <constraint firstItem="1Ww-7V-oFt" firstAttribute="top" secondItem="aOk-lX-ZxI" secondAttribute="top" id="JVN-hv-EGS"/>
                                                             <constraint firstAttribute="trailing" secondItem="r7g-UW-Pa7" secondAttribute="trailing" constant="14" id="QcR-M9-i00"/>
                                                             <constraint firstItem="XYV-Ax-7QM" firstAttribute="leading" secondItem="aOk-lX-ZxI" secondAttribute="leading" constant="14" id="YAm-YT-p4o"/>
                                                             <constraint firstItem="XYV-Ax-7QM" firstAttribute="top" secondItem="aOk-lX-ZxI" secondAttribute="top" constant="8" id="kj5-CE-NhL"/>
                                                             <constraint firstAttribute="bottom" secondItem="XYV-Ax-7QM" secondAttribute="bottom" constant="8" id="osy-0s-fBo"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1Ww-7V-oFt" secondAttribute="bottom" id="rbK-GO-se0"/>
                                                             <constraint firstItem="r7g-UW-Pa7" firstAttribute="top" secondItem="aOk-lX-ZxI" secondAttribute="top" constant="8" id="uyM-sJ-Hi1"/>
+                                                            <constraint firstItem="r7g-UW-Pa7" firstAttribute="leading" secondItem="1Ww-7V-oFt" secondAttribute="trailing" id="zPZ-tW-RdL"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="roundedCornersValue">
@@ -1047,6 +1059,9 @@
                                                         <integer key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="EditButtonPressed:" destination="Ot7-fN-jBe" eventType="touchUpInside" id="iak-fQ-XS8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1098,6 +1113,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Detail" image="square.and.pencil" catalog="system" id="5pw-7V-N50"/>
                     <navigationItem key="navigationItem" id="rGk-8m-lCg"/>
+                    <connections>
+                        <outlet property="createPasswordField" destination="Iqu-a5-HWz" id="fb9-8t-zkI"/>
+                        <outlet property="doBirthField" destination="BWZ-jZ-odp" id="SNO-aF-AMD"/>
+                        <outlet property="emailField" destination="vYD-o7-DSW" id="VDY-fy-D14"/>
+                        <outlet property="firstNameField" destination="TIl-9r-ABx" id="QxC-7U-eZp"/>
+                        <outlet property="lastNameField" destination="19M-Hg-jER" id="bBk-i8-6mu"/>
+                        <outlet property="varifyPasswordField" destination="HWs-lC-FYX" id="GVQ-zl-WEO"/>
+                        <outlet property="vehicleMakeField" destination="IGl-nW-z5r" id="Sg5-wb-8jB"/>
+                        <outlet property="vehicleModelField" destination="Odq-44-gOW" id="ICX-tT-xOj"/>
+                        <outlet property="vehicleRegistrationField" destination="ZoI-4M-Sfo" id="jMP-P9-TwB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G89-vL-pCv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1503,6 +1529,43 @@
             </objects>
             <point key="canvasLocation" x="39.200000000000003" y="1363.2683658170915"/>
         </scene>
+        <!--Chat MainVC-->
+        <scene sceneID="p1v-ux-Xgb">
+            <objects>
+                <viewController storyboardIdentifier="ChatMainVC" id="4DI-AI-Vmb" customClass="ChatMainVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JMe-Tv-n2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ony-20-g3Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RNR-3j-vfj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DZh-PO-aSM">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="saz-bx-nXd"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ony-20-g3Y" firstAttribute="top" secondItem="saz-bx-nXd" secondAttribute="top" id="05w-qi-Bno"/>
+                            <constraint firstItem="saz-bx-nXd" firstAttribute="trailing" secondItem="ony-20-g3Y" secondAttribute="trailing" id="KbY-Vc-nV4"/>
+                            <constraint firstItem="ony-20-g3Y" firstAttribute="leading" secondItem="saz-bx-nXd" secondAttribute="leading" id="Oz9-nI-ygp"/>
+                            <constraint firstItem="DZh-PO-aSM" firstAttribute="leading" secondItem="saz-bx-nXd" secondAttribute="leading" id="bCe-SY-lIt"/>
+                            <constraint firstItem="saz-bx-nXd" firstAttribute="bottom" secondItem="DZh-PO-aSM" secondAttribute="bottom" id="pID-OK-SFM"/>
+                            <constraint firstItem="saz-bx-nXd" firstAttribute="trailing" secondItem="DZh-PO-aSM" secondAttribute="trailing" id="uni-ET-dad"/>
+                            <constraint firstItem="DZh-PO-aSM" firstAttribute="top" secondItem="ony-20-g3Y" secondAttribute="bottom" id="zWO-2L-1cE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unN-ca-EdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="1366"/>
+        </scene>
         <!--SplashVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -1654,7 +1717,7 @@ addrive2022</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e3-RI-qyP">
-                                        <rect key="frame" x="24" y="173" width="116" height="40"/>
+                                        <rect key="frame" x="24" y="173" width="115.5" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="kuN-Sj-8Fb"/>
                                         </constraints>
@@ -1826,16 +1889,16 @@ addrive2022</string>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U7t-AE-xwH">
-                                        <rect key="frame" x="66" y="493" width="243" height="57"/>
+                                        <rect key="frame" x="66" y="493" width="243" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhC-4B-YlD">
-                                                <rect key="frame" x="45" y="0.0" width="153" height="28.5"/>
+                                                <rect key="frame" x="44" y="0.0" width="155.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5En-d9-gaG">
-                                                <rect key="frame" x="86" y="28.5" width="71.5" height="28.5"/>
+                                                <rect key="frame" x="87.5" y="28" width="68.5" height="28"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Register">
@@ -1952,22 +2015,22 @@ addrive2022</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need location services on to allow us to provide features like:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5o-1G-Wkn">
-                                        <rect key="frame" x="24" y="130.5" width="316" height="81"/>
+                                        <rect key="frame" x="24" y="130.5" width="316" height="80.5"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-5g-ggz">
-                                        <rect key="frame" x="24" y="237.5" width="321" height="95"/>
+                                        <rect key="frame" x="24" y="237" width="321" height="94"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Detect and record your drives automatically" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPV-Q5-wfX">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="42"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Keep track of the places that you have visited" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-nl-Jv7">
-                                                <rect key="frame" x="0.0" y="52.5" width="321" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="52" width="321" height="42"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -3395,16 +3458,16 @@ addrive2022</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XKV-VV-zi3">
-                                        <rect key="frame" x="24" y="36" width="103" height="51.5"/>
+                                        <rect key="frame" x="24" y="36" width="101" height="50.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-Drive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-n3-uJb">
-                                                <rect key="frame" x="0.0" y="0.0" width="103" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="28"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Bold" family="TT Norms Pro" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGi-Lo-v2C">
-                                                <rect key="frame" x="0.0" y="33.5" width="103" height="18"/>
+                                                <rect key="frame" x="0.0" y="33" width="101" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -3412,7 +3475,7 @@ addrive2022</string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzt-xd-DuK">
-                                        <rect key="frame" x="24" y="103.5" width="53" height="1.5"/>
+                                        <rect key="frame" x="24" y="102.5" width="53" height="1.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="DFG-DJ-fsm"/>
@@ -3420,7 +3483,7 @@ addrive2022</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZJ-14-FnV">
-                                        <rect key="frame" x="321" y="47" width="30" height="30"/>
+                                        <rect key="frame" x="321" y="46.5" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="R7b-iK-vYf"/>
                                             <constraint firstAttribute="width" constant="30" id="sID-Co-Xq0"/>
@@ -3433,13 +3496,13 @@ addrive2022</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please upload clear images of the front, rear, passenger and drivers side of your vehicle." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-hY-AIX">
-                                        <rect key="frame" x="24" y="117" width="317" height="35.5"/>
+                                        <rect key="frame" x="24" y="116" width="317" height="35"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="AqV-lf-mgh">
-                                        <rect key="frame" x="60" y="190.5" width="255" height="255"/>
+                                        <rect key="frame" x="60" y="189" width="255" height="255"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lIO-Y7-03s">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="255"/>
@@ -3661,10 +3724,10 @@ addrive2022</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-SX-ECM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="746.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="745"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVb-Ey-uXg" customClass="CustomView" customModule="Ad_Drive" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="746.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="745"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-Drive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzE-lU-o6n">
                                                         <rect key="frame" x="60" y="80" width="255" height="42.5"/>
@@ -3683,19 +3746,19 @@ addrive2022</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Hello! Welcome to Ad-Drive, New Zealand's first company that allows you to get paid while you drive!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgG-zM-Pnf">
-                                                        <rect key="frame" x="26" y="186" width="323" height="175.5"/>
+                                                        <rect key="frame" x="26" y="186" width="323" height="175"/>
                                                         <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our mission is to connect high milage drivers with local advertisers to display short term vinyl wrap adverts on cars." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-pI-RBc">
-                                                        <rect key="frame" x="26" y="385.5" width="323" height="211"/>
+                                                        <rect key="frame" x="26" y="385" width="323" height="210"/>
                                                         <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laS-dG-7yE" customClass="CustomButton" customModule="Ad_Drive" customModuleProvider="target">
-                                                        <rect key="frame" x="70" y="636.5" width="235" height="50"/>
+                                                        <rect key="frame" x="70" y="635" width="235" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="ROH-nB-ufV"/>
@@ -3810,7 +3873,7 @@ addrive2022</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezA-cL-5Mb">
-                                        <rect key="frame" x="24" y="36" width="98" height="18"/>
+                                        <rect key="frame" x="24" y="36" width="95.5" height="18"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-Bold" family="TT Norms Pro" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3925,16 +3988,16 @@ addrive2022</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-6h-ttt">
-                                        <rect key="frame" x="24" y="36" width="139.5" height="52"/>
+                                        <rect key="frame" x="24" y="36" width="137" height="52"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-Drive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byw-Ix-Ks4">
-                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="26"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Bold" family="TT Norms Pro" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motion and Fitness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-5O-DpO">
-                                                <rect key="frame" x="0.0" y="26" width="139.5" height="26"/>
+                                                <rect key="frame" x="0.0" y="26" width="137" height="26"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -3963,22 +4026,22 @@ addrive2022</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to use Motion and Fitness to allow us to provide features like:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vl-U9-yyJ">
-                                        <rect key="frame" x="24" y="130.5" width="316" height="81"/>
+                                        <rect key="frame" x="24" y="130.5" width="316" height="80.5"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XOt-TO-hDb">
-                                        <rect key="frame" x="24" y="237.5" width="321" height="53"/>
+                                        <rect key="frame" x="24" y="237" width="321" height="52"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Drive start and end detection" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-o7-rFv">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="21"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Reduce battery consumption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2S-1Y-1Zk">
-                                                <rect key="frame" x="0.0" y="31.5" width="321" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="31" width="321" height="21"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4067,16 +4130,16 @@ addrive2022</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-Mt-LaZ">
-                                        <rect key="frame" x="24" y="36" width="94" height="52"/>
+                                        <rect key="frame" x="24" y="36" width="89.5" height="52"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-Drive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-Hp-aEE">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Bold" family="TT Norms Pro" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-Xx-Pjc">
-                                                <rect key="frame" x="0.0" y="26" width="94" height="26"/>
+                                                <rect key="frame" x="0.0" y="26" width="89.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4111,16 +4174,16 @@ addrive2022</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTa-Ew-8nh">
-                                        <rect key="frame" x="24" y="210.5" width="321" height="95"/>
+                                        <rect key="frame" x="24" y="210.5" width="321" height="94"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Receive alerts when new campaigns become available" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-tg-wNw">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="42"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Receive updates or changes to campaigns" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlS-fD-SNT">
-                                                <rect key="frame" x="0.0" y="52.5" width="321" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="52" width="321" height="42"/>
                                                 <fontDescription key="fontDescription" name="TTNormsPro-Regular" family="TT Norms Pro" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4210,19 +4273,19 @@ addrive2022</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You’re all done!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EE-gi-sGU">
-                                        <rect key="frame" x="60" y="75" width="255" height="94"/>
+                                        <rect key="frame" x="60" y="75" width="255" height="93.5"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-ExtraBold" family="TT Norms Pro" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please ensure the app has location services and tracking always granted so we can measure your weekly driving habits." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xId-YO-ZGO">
-                                        <rect key="frame" x="26" y="232.5" width="323" height="146.5"/>
+                                        <rect key="frame" x="26" y="232" width="323" height="146"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will be in contact once we have a campaign that fits your driving schedule!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-n4-3ih">
-                                        <rect key="frame" x="26" y="403" width="323" height="88"/>
+                                        <rect key="frame" x="26" y="402" width="323" height="87.5"/>
                                         <fontDescription key="fontDescription" name="TTNormsPro-Medium" family="TT Norms Pro" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -5177,31 +5240,46 @@ addrive2022</string>
             </objects>
             <point key="canvasLocation" x="5146" y="532"/>
         </scene>
+        <!--MessagingVC-->
+        <scene sceneID="bZ4-fr-tVY">
+            <objects>
+                <viewController storyboardIdentifier="MessagingVC" id="UCo-79-TAL" customClass="MessagingVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MnO-Be-cTn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="q9a-Dk-GoG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDT-e5-1Sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3108" y="1366"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="03w-GD-JiV">
-            <size key="intrinsicContentSize" width="70" height="37.5"/>
+            <size key="intrinsicContentSize" width="66" height="37.5"/>
         </designable>
         <designable name="2ar-3i-MBi">
-            <size key="intrinsicContentSize" width="66" height="35.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="35.5"/>
         </designable>
         <designable name="Bhq-GT-54W">
-            <size key="intrinsicContentSize" width="58.5" height="32"/>
+            <size key="intrinsicContentSize" width="55.5" height="31.5"/>
         </designable>
         <designable name="QV7-IK-cJ7">
-            <size key="intrinsicContentSize" width="70" height="37.5"/>
+            <size key="intrinsicContentSize" width="66" height="37.5"/>
         </designable>
         <designable name="hyE-tx-c0e">
-            <size key="intrinsicContentSize" width="58.5" height="32"/>
+            <size key="intrinsicContentSize" width="55.5" height="31.5"/>
         </designable>
         <designable name="laS-dG-7yE">
-            <size key="intrinsicContentSize" width="66" height="35.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="35.5"/>
         </designable>
         <designable name="t7X-O7-0vk">
-            <size key="intrinsicContentSize" width="78.5" height="34"/>
+            <size key="intrinsicContentSize" width="77" height="34"/>
         </designable>
         <designable name="tVt-0R-s3e">
-            <size key="intrinsicContentSize" width="58.5" height="32"/>
+            <size key="intrinsicContentSize" width="55.5" height="31.5"/>
         </designable>
     </designables>
     <resources>
@@ -5215,8 +5293,8 @@ addrive2022</string>
         <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
         <image name="icon_awesome_check" width="57" height="42"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="person" width="27" height="38"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person" width="27" height="38"/>
         <image name="placeholderImage" width="422" height="475"/>
         <image name="rectangle_3" width="86" height="89"/>
         <image name="registration" width="32" height="20"/>
@@ -5237,6 +5315,9 @@ addrive2022</string>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

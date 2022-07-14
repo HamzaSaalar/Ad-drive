@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatMainTVCell" rowHeight="70" id="KGk-i7-Jjw" customClass="ChatMainTVCell" customModule="Ad_Drive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZBM-3D-QHB">
+                        <rect key="frame" x="15" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="3tv-jS-mUb"/>
+                            <constraint firstAttribute="height" constant="50" id="nvv-S3-6Uo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammad Qasim" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVA-qs-CPQ">
+                        <rect key="frame" x="75" y="16" width="179" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, how are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-AP-rEB">
+                        <rect key="frame" x="75" y="41.5" width="230" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:58 am" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-hF-307">
+                        <rect key="frame" x="262" y="16" width="50" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="svu-T5-6Cy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="GCN-AP-rEB" secondAttribute="trailing" constant="15" id="0IZ-ZO-C1B"/>
+                    <constraint firstItem="DQA-hF-307" firstAttribute="leading" secondItem="CVA-qs-CPQ" secondAttribute="trailing" constant="8" id="8Ox-Uk-OoS"/>
+                    <constraint firstItem="GCN-AP-rEB" firstAttribute="leading" secondItem="ZBM-3D-QHB" secondAttribute="trailing" constant="10" id="Bx6-dP-hvH"/>
+                    <constraint firstItem="ZBM-3D-QHB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="EBc-Kq-hMc"/>
+                    <constraint firstAttribute="trailing" secondItem="DQA-hF-307" secondAttribute="trailing" constant="8" id="Egy-Cf-gxD"/>
+                    <constraint firstItem="CVA-qs-CPQ" firstAttribute="top" secondItem="ZBM-3D-QHB" secondAttribute="top" constant="6" id="Pzh-zi-P2d"/>
+                    <constraint firstItem="CVA-qs-CPQ" firstAttribute="leading" secondItem="ZBM-3D-QHB" secondAttribute="trailing" constant="10" id="Q5B-zO-N5s"/>
+                    <constraint firstItem="ZBM-3D-QHB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ScE-AS-AoB"/>
+                    <constraint firstItem="DQA-hF-307" firstAttribute="top" secondItem="CVA-qs-CPQ" secondAttribute="top" id="V85-dP-ScX"/>
+                    <constraint firstItem="GCN-AP-rEB" firstAttribute="bottom" secondItem="ZBM-3D-QHB" secondAttribute="bottom" constant="-5" id="ig2-b4-ENj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageViewProfile" destination="ZBM-3D-QHB" id="Jry-AM-0ri"/>
+                <outlet property="labelMessage" destination="GCN-AP-rEB" id="5S4-Wj-3Am"/>
+                <outlet property="labelName" destination="CVA-qs-CPQ" id="zHH-dQ-beI"/>
+                <outlet property="labelTime" destination="DQA-hF-307" id="nWu-3L-JBL"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

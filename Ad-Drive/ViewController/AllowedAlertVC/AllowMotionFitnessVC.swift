@@ -21,7 +21,8 @@ class AllowMotionFitnessVC: UIViewController {
     }
     
 
-    func showAlert(){
+    func showAlert()
+    {
         let alert = UIAlertController(title: "“Ad-Drive” would like to access your Motion & Fitness activity", message: "Ad-Drive needs to access motion data to improve drive detection accuracy", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

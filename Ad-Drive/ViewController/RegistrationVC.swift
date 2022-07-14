@@ -8,6 +8,27 @@
 import UIKit
 import ObjectMapper
 
+struct carRegister : Codable {
+    let id : Int?
+//        let imagesUrl : [String]?
+    let make : String?
+    let model : String?
+    let registrationNumber : String?
+}
+
+struct responseModelRegister : Codable {
+    let car : carRegister?
+    let dob : String?
+    let driverNumber : String?
+    let driverToken : String?
+    let email : String?
+    let firstName : String?
+    let id : Int?
+    let lastName : String?
+    let password : String?
+    
+}
+
 class RegistrationVC: UIViewController {
 
     @IBOutlet weak var firstNameField: UITextField!
@@ -25,7 +46,7 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var vehicleRegistrationField: UITextField!
     
     
-    var reponseSend: responseModel!
+    var reponseSend: responseModelRegister!
     
     
     override func viewDidLoad() {
@@ -44,98 +65,76 @@ class RegistrationVC: UIViewController {
             createPasswordField.isSecureTextEntry = true
         }
         if createPasswordField.isSecureTextEntry {
-            createPasswordHidden.setImage(UIImage(systemName: "eye") , for: .normal)
+//            createPasswordHidden.setImage(UIImage(systemName: "eye") , for: .normal)
+            createPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
-            createPasswordHidden.setImage(UIImage(systemName: "eye.slash") , for: .normal)
+            createPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
         }
-
     }
-    @IBAction func passwordSwitcherTwo(_ sender: Any) {
+
+    @IBAction func passwordSwitcherTwo(_ sender: Any)
+    {
         if varifyPasswordField.isSecureTextEntry {
             varifyPasswordField.isSecureTextEntry = false
         } else {
             varifyPasswordField.isSecureTextEntry = true
         }
         if varifyPasswordField.isSecureTextEntry {
-            varifyPasswordHidden.setImage(UIImage(systemName: "eye") , for: .normal)
+            varifyPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
-            varifyPasswordHidden.setImage(UIImage(systemName: "eye.slash") , for: .normal)
+            varifyPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
         }
+    }
+    
+    @IBAction func ButtonOnDate(_ sender: Any)
+    {
         
     }
-    struct Car : Codable {
-        let id : Int?
-//        let imagesUrl : [String]?
-        let make : String?
-        let model : String?
-        let registrationNumber : String?
-    }
-    
-    struct responseModel : Codable {
-        let car : Car?
-        let dob : String?
-        let driverNumber : String?
-        let driverToken : String?
-        let email : String?
-        let firstName : String?
-        let id : Int?
-        let lastName : String?
-        let password : String?
         
-    }
-    
-    
-    @IBAction func nextButtonPressed(_ sender: Any) {
-        if !(firstNameField.text?.isEmpty ?? false) || !(lastNameField.text?.isEmpty ?? false) || !(doBirthField.text?.isEmpty ?? false) || !(emailField.text?.isEmpty ?? false) || !(createPasswordField.text?.isEmpty ?? false) || !(varifyPasswordField.text?.isEmpty ?? false) {
-            
-            
-            
-            let carModel = Car(id: 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: "123444")
+    @IBAction func nextButtonPressed(_ sender: Any)
+    {
+        if !(firstNameField.text?.isEmpty ?? false) || !(lastNameField.text?.isEmpty ?? false) || !(doBirthField.text?.isEmpty ?? false) || !(emailField.text?.isEmpty ?? false) || !(createPasswordField.text?.isEmpty ?? false) || !(varifyPasswordField.text?.isEmpty ?? false)
+        {
+            let carModel = carRegister(id: 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: vehicleRegistrationField.text ?? "")
             //yyyy-mm-dd
-            reponseSend =  responseModel(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
+            reponseSend =  responseModelRegister(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
             
             print("register request : -> ", reponseSend as Any)
             ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post) { responseVaue, successval, errorval, statusCode in
                 
                 if successval ?? false {
                     print(responseVaue as Any)
-                    if let responseHandler = Mapper<ResponseHandler>().map(JSON: responseVaue?.dict ?? [:]) {
+                    if let responseHandler = Mapper<LoginResponseModel>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil{
-                                if let register = Mapper<RegisterResponse>().map(JSONObject: responseHandler.data){
-                                    print("User Email \(register.email ?? "")")
-                                    
+                                if let register = Mapper<LoginData>().map(JSONObject: responseHandler.data){
+                                    print("User Email \(register.driver?.email ?? "")")
+
                                     do {
-                                        let dataArchived = try NSKeyedArchiver.archivedData(withRootObject: register, requiringSecureCoding: false)
-                                        //NSKeyedArchiver.archivedData(withRootObject: register)
-                                        UserDefaults.standard.set(dataArchived, forKey: "UserData")
-                                        UserDefaults.standard.synchronize()
+                                        let dataa = try responseVaue?.rawData()
                                         
-                                    } catch {
-                                        print("")
+                                        UserDefaults.standard.set(dataa!, forKey: "loginUser")
+                                        
+                                    } catch (let error) {
+                                        print(error)
                                     }
-                                    //UserDefaults.standard.set(register, forKey: "UserData")
-                                    //let value = UserDefaults.standard.value(forKey: "UserData") as? RegisterResponse
-                                    //value?.email
+                                    DataManager.shared.LoginResponse = responseHandler
                                     
                                     DispatchQueue.main.async {
                                         if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
                                             self.navigationController?.pushViewController(imagesViewController, animated: true)
                                         }
                                     }
-                                    
                                 }
                             }
                         }else {
-                            print(responseHandler.error)
+                            print(responseHandler.error ?? "")
                         }
                     }
                 } else {
                     print(errorval?.localizedDescription ?? "")
                 }
-                
             }
-           
         }
         else{
             print("please fill the fields")

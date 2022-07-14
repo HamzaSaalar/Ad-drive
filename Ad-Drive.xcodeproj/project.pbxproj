@@ -81,6 +81,16 @@
 		88AF8861285DF1E20035B0C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF8860285DF1E20035B0C6 /* LoginViewController.swift */; };
 		CE27FC02286C79DC00A01595 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27FC01286C79DC00A01595 /* ApiService.swift */; };
 		CE27FC04286C7A1A00A01595 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27FC03286C7A1A00A01595 /* Endpoints.swift */; };
+		CE560171287ECD9400B69767 /* ChatMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560170287ECD9400B69767 /* ChatMainVC.swift */; };
+		CE560173287ECDA800B69767 /* MessagingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560172287ECDA800B69767 /* MessagingVC.swift */; };
+		CE560177287ECFDF00B69767 /* ChatMainTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560175287ECFDF00B69767 /* ChatMainTVCell.swift */; };
+		CE560178287ECFDF00B69767 /* ChatMainTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE560176287ECFDF00B69767 /* ChatMainTVCell.xib */; };
+		CE56017B287ED34300B69767 /* ChatMeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560179287ED34300B69767 /* ChatMeTVCell.swift */; };
+		CE56017C287ED34300B69767 /* ChatMeTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE56017A287ED34300B69767 /* ChatMeTVCell.xib */; };
+		CE56017F287ED6C100B69767 /* ChatOtherTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56017D287ED6C100B69767 /* ChatOtherTVCell.swift */; };
+		CE560180287ED6C100B69767 /* ChatOtherTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE56017E287ED6C100B69767 /* ChatOtherTVCell.xib */; };
+		CE560182287F46A400B69767 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560181287F46A400B69767 /* LoginResponseModel.swift */; };
+		CE560184287FF54700B69767 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560183287FF54700B69767 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +193,16 @@
 		BB2E76E820C1A866A408C911 /* Pods-Ad-Drive-Ad-DriveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-Drive-Ad-DriveUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ad-Drive-Ad-DriveUITests/Pods-Ad-Drive-Ad-DriveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE27FC01286C79DC00A01595 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		CE27FC03286C7A1A00A01595 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		CE560170287ECD9400B69767 /* ChatMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainVC.swift; sourceTree = "<group>"; };
+		CE560172287ECDA800B69767 /* MessagingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingVC.swift; sourceTree = "<group>"; };
+		CE560175287ECFDF00B69767 /* ChatMainTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainTVCell.swift; sourceTree = "<group>"; };
+		CE560176287ECFDF00B69767 /* ChatMainTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMainTVCell.xib; sourceTree = "<group>"; };
+		CE560179287ED34300B69767 /* ChatMeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMeTVCell.swift; sourceTree = "<group>"; };
+		CE56017A287ED34300B69767 /* ChatMeTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMeTVCell.xib; sourceTree = "<group>"; };
+		CE56017D287ED6C100B69767 /* ChatOtherTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOtherTVCell.swift; sourceTree = "<group>"; };
+		CE56017E287ED6C100B69767 /* ChatOtherTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatOtherTVCell.xib; sourceTree = "<group>"; };
+		CE560181287F46A400B69767 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		CE560183287FF54700B69767 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D21496A6047D067D94823DF7 /* Pods-Ad-DriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.debug.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC77DAB9AC96B773B98158D7 /* Pods-Ad-DriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.release.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,6 +343,7 @@
 				880EB5DB28647CB100AE058D /* FinishInformationVC.swift */,
 				88AF8860285DF1E20035B0C6 /* LoginViewController.swift */,
 				8828838128632E8000F7E3C8 /* GalleryViewController.swift */,
+				CE56016F287ECD7F00B69767 /* Chat */,
 				880EB5D628644C2E00AE058D /* TabBarControllerVC */,
 				880EB5D528644AF200AE058D /* AllowedAlertVC */,
 			);
@@ -351,6 +372,7 @@
 			children = (
 				88895B8A285B0C2800646011 /* tt-norms-pro-cufonfonts */,
 				88895B29285B015400646011 /* TT-Norms-Fonts */,
+				CE560183287FF54700B69767 /* DataManager.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -434,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				886A9784286DC9D300304FEB /* Car.swift */,
+				CE560181287F46A400B69767 /* LoginResponseModel.swift */,
 				886A9786286DC9D300304FEB /* Compaign.swift */,
 				886A9785286DC9D300304FEB /* Data.swift */,
 			);
@@ -448,6 +471,29 @@
 				886A9781286DC41000304FEB /* responseHandler.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		CE56016F287ECD7F00B69767 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CE560170287ECD9400B69767 /* ChatMainVC.swift */,
+				CE560172287ECDA800B69767 /* MessagingVC.swift */,
+				CE560174287ECF8400B69767 /* ChatCells */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		CE560174287ECF8400B69767 /* ChatCells */ = {
+			isa = PBXGroup;
+			children = (
+				CE560175287ECFDF00B69767 /* ChatMainTVCell.swift */,
+				CE560176287ECFDF00B69767 /* ChatMainTVCell.xib */,
+				CE560179287ED34300B69767 /* ChatMeTVCell.swift */,
+				CE56017A287ED34300B69767 /* ChatMeTVCell.xib */,
+				CE56017D287ED6C100B69767 /* ChatOtherTVCell.swift */,
+				CE56017E287ED6C100B69767 /* ChatOtherTVCell.xib */,
+			);
+			path = ChatCells;
 			sourceTree = "<group>";
 		};
 		D7F50DE484EA6BC739C6C5B9 /* Frameworks */ = {
@@ -590,6 +636,7 @@
 				88895B70285B015400646011 /* TTNorms-Black.otf in Resources */,
 				88895B68285B015400646011 /* TTNorms-LightItalic.otf in Resources */,
 				88895BAD285B0C2800646011 /* TT Norms Pro Medium.otf in Resources */,
+				CE560180287ED6C100B69767 /* ChatOtherTVCell.xib in Resources */,
 				88895B7C285B015400646011 /* TTNorms-Italic.otf in Resources */,
 				88895B9E285B0C2800646011 /* TT Norms Pro ExtraBold.otf in Resources */,
 				88895BA3285B0C2800646011 /* TT Norms Pro Regular.otf in Resources */,
@@ -598,6 +645,7 @@
 				88895B73285B015400646011 /* TTNorms-BlackItalic.otf in Resources */,
 				88895BA1285B0C2800646011 /* TT Norms Pro Light Italic.otf in Resources */,
 				88895B75285B015400646011 /* TTNorms-Bold.otf in Resources */,
+				CE56017C287ED34300B69767 /* ChatMeTVCell.xib in Resources */,
 				88895B5F285B015400646011 /* TTNorms-ExtraBoldItalic.otf in Resources */,
 				88895B7F285B015400646011 /* TTNorms-ExtraLightItalic.otf in Resources */,
 				88895BAA285B0C2800646011 /* TT Norms Pro Medium Italic.otf in Resources */,
@@ -608,6 +656,7 @@
 				88895BA5285B0C2800646011 /* TT Norms Pro Thin Italic.otf in Resources */,
 				88288388286333C700F7E3C8 /* ImagesCollectionViewCell.xib in Resources */,
 				8878B1BA284762D8008AD11D /* Assets.xcassets in Resources */,
+				CE560178287ECFDF00B69767 /* ChatMainTVCell.xib in Resources */,
 				88895BA0285B0C2800646011 /* TT Norms Pro Black.otf in Resources */,
 				88895B7A285B015400646011 /* TTNorms-ThinItalic.otf in Resources */,
 				88895BA4285B0C2800646011 /* TT Norms Pro ExtraLight.otf in Resources */,
@@ -751,6 +800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				880EB5DC28647CB100AE058D /* FinishInformationVC.swift in Sources */,
+				CE560171287ECD9400B69767 /* ChatMainVC.swift in Sources */,
 				8878B1E928479151008AD11D /* File.swift in Sources */,
 				884E63CA2860786F00D1A075 /* SettingViewController.swift in Sources */,
 				88895B272859E81200646011 /* DriverConditionsTableViewCell.swift in Sources */,
@@ -758,15 +808,20 @@
 				884E63C5285F5F6300D1A075 /* CustomButton.swift in Sources */,
 				880EB5DA28646EDA00AE058D /* RegistrationVC.swift in Sources */,
 				CE27FC02286C79DC00A01595 /* ApiService.swift in Sources */,
+				CE560184287FF54700B69767 /* DataManager.swift in Sources */,
 				8878B1B5284762D6008AD11D /* SplashVC.swift in Sources */,
+				CE560177287ECFDF00B69767 /* ChatMainTVCell.swift in Sources */,
 				88798BE42865984E0037B2ED /* TabBarVC.swift in Sources */,
 				8828838228632E8000F7E3C8 /* GalleryViewController.swift in Sources */,
+				CE560173287ECDA800B69767 /* MessagingVC.swift in Sources */,
+				CE56017B287ED34300B69767 /* ChatMeTVCell.swift in Sources */,
 				8878B1E3284763CD008AD11D /* CustomView.swift in Sources */,
 				8828837F286249EA00F7E3C8 /* ImagesViewController.swift in Sources */,
 				CE27FC04286C7A1A00A01595 /* Endpoints.swift in Sources */,
 				886A9782286DC41000304FEB /* responseHandler.swift in Sources */,
 				88AF8861285DF1E20035B0C6 /* LoginViewController.swift in Sources */,
 				8878B1B1284762D6008AD11D /* AppDelegate.swift in Sources */,
+				CE560182287F46A400B69767 /* LoginResponseModel.swift in Sources */,
 				880EB5D428644ACA00AE058D /* AllowLocationServicesVC.swift in Sources */,
 				880EB5D8286467A800AE058D /* WelcomeAppVC.swift in Sources */,
 				884E63C82860622000D1A075 /* DetailViewController.swift in Sources */,
@@ -774,6 +829,7 @@
 				88288387286333C700F7E3C8 /* ImagesCollectionViewCell.swift in Sources */,
 				886A978A286DC9D400304FEB /* Compaign.swift in Sources */,
 				880EB5D028644A2500AE058D /* AllowNotificationVC.swift in Sources */,
+				CE56017F287ED6C100B69767 /* ChatOtherTVCell.swift in Sources */,
 				88895BB0285B182500646011 /* ConditionsViewController.swift in Sources */,
 				886A9789286DC9D400304FEB /* Data.swift in Sources */,
 				880EB5D228644A6E00AE058D /* AllowMotionFitnessVC.swift in Sources */,
@@ -956,7 +1012,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9WY2C7P6M2;
+				DEVELOPMENT_TEAM = 5N4366G57A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ad-Drive/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -964,12 +1020,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.AzerNar-.Ad-Drive";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ad-Drive.project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -985,7 +1042,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9WY2C7P6M2;
+				DEVELOPMENT_TEAM = 5N4366G57A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ad-Drive/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -993,12 +1050,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.AzerNar-.Ad-Drive";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ad-Drive.project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
