@@ -18,6 +18,10 @@ class ChatMainTVCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        imageViewProfile.backgroundColor = .lightGray
+        imageViewProfile.layer.cornerRadius = 25
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

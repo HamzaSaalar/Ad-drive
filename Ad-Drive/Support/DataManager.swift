@@ -5,8 +5,11 @@
 //  Created by Muhammad Qasim on 14/07/2022.
 //
 
+import UIKit
 import Foundation
 import CoreLocation
+import CoreMotion
+import UserNotifications
 
 
 class DataManager : NSObject {
@@ -41,6 +44,42 @@ class DataManager : NSObject {
 //        
 //        if cmmot
 //    }
+    
+    
+    func checkNotificationsEnabled() -> Bool
+    {
+        var check = false
+        if #available(iOS 10.0, *) {
+            let current = UNUserNotificationCenter.current()
+            current.getNotificationSettings(completionHandler: { settings in
+                
+                if settings.authorizationStatus == .authorized {
+                    check = true
+                } else {
+                    check = false
+                }
+            })
+        } else {
+            // Fallback on earlier versions
+            if UIApplication.shared.isRegisteredForRemoteNotifications {
+                check = true
+                print("APNS-YES")
+            } else {
+                check = false
+                print("APNS-NO")
+            }
+        }
+        return check ? true : false
+    }
+    
+    func checkMotionPermission() -> Bool {
+        
+        if CMMotionActivityManager.authorizationStatus() == .authorized {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
 }

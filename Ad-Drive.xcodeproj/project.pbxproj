@@ -1015,6 +1015,9 @@
 				DEVELOPMENT_TEAM = 5N4366G57A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ad-Drive/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Ad-Drive needs to access motion data to improve drive detection accuracy";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1045,6 +1048,9 @@
 				DEVELOPMENT_TEAM = 5N4366G57A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ad-Drive/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Ad-Drive needs to access motion data to improve drive detection accuracy";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

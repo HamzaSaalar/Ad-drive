@@ -71,15 +71,24 @@ class LoginViewController: UIViewController {
                         }
                         DataManager.shared.LoginResponse = dataobj
                         
-                    }
-                    
-                    DispatchQueue.main.async {
-                        if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
-                            self.navigationController?.pushViewController(imagesViewController, animated: true)
+                        
+                        if dataobj.data?.driver?.car?.imagesUrl?.count ?? 0 > 0 { // contain Images Directly navigate to Home
+                            
+                            DispatchQueue.main.async {
+                                if let tabBarVC : TabBarVC = TabBarVC.instantiateViewControllerFromStoryboard() {
+                                    self.navigationController?.pushViewController(tabBarVC, animated: true)
+                                }
+                            }
+                            
+                        } else { // send to images controller
+                            
+                            DispatchQueue.main.async {
+                                if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
+                                    self.navigationController?.pushViewController(imagesViewController, animated: true)
+                                }
+                            }
                         }
                     }
-                    
-
                 } else {
                     print(errorval?.localizedDescription ?? "")
                 }

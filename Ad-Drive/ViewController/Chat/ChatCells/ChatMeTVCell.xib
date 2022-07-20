@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,22 +19,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ct1-ul-Nsk">
-                        <rect key="frame" x="44" y="5" width="271" height="73.5"/>
+                        <rect key="frame" x="60" y="5" width="255" height="107"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, how are you my brother? Hello, how are you my brother?Hello, how are you my brother?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4p-aK-J8O">
-                                <rect key="frame" x="8" y="8" width="255" height="50.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4p-aK-J8O">
+                                <rect key="frame" x="8" y="8" width="239" height="84"/>
+                                <string key="text">Hello, how are you my brother? Hello, how are you my brother?Hello, how are you my brother? Hello, how are you my brother?Hello, how are you my brother?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:58 pm" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wX-Dg-RBM">
-                                <rect key="frame" x="10" y="58.5" width="253" height="10"/>
+                                <rect key="frame" x="10" y="92" width="237" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="D4p-aK-J8O" secondAttribute="bottom" constant="15" id="0Ww-nu-fTU"/>
                             <constraint firstAttribute="bottom" secondItem="6wX-Dg-RBM" secondAttribute="bottom" constant="5" id="BO5-JH-38R"/>
@@ -49,7 +51,7 @@
                     <constraint firstAttribute="trailing" secondItem="Ct1-ul-Nsk" secondAttribute="trailing" constant="5" id="6uG-mb-TL3"/>
                     <constraint firstItem="Ct1-ul-Nsk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="A6p-Rq-xkh"/>
                     <constraint firstAttribute="bottom" secondItem="Ct1-ul-Nsk" secondAttribute="bottom" priority="250" constant="5" id="Lrv-Dj-IGJ"/>
-                    <constraint firstItem="Ct1-ul-Nsk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="Ulk-SK-JTu"/>
+                    <constraint firstItem="Ct1-ul-Nsk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="Ulk-SK-JTu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -57,13 +59,14 @@
             <connections>
                 <outlet property="labelMessage" destination="D4p-aK-J8O" id="fZ6-6A-1gb"/>
                 <outlet property="labelTime" destination="6wX-Dg-RBM" id="rWg-cd-1o2"/>
+                <outlet property="viewBack" destination="Ct1-ul-Nsk" id="T6i-nh-EjT"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="123.21428571428571"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

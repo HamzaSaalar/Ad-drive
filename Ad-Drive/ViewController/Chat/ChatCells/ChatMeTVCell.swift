@@ -12,10 +12,12 @@ class ChatMeTVCell: UITableViewCell {
     
     @IBOutlet weak var labelMessage     : UILabel!
     @IBOutlet weak var labelTime        : UILabel!
+    @IBOutlet weak var viewBack         : UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
