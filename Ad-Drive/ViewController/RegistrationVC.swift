@@ -8,64 +8,65 @@
 import UIKit
 import ObjectMapper
 
-struct carRegister : Codable {
-    let id : Int?
-//        let imagesUrl : [String]?
-    let make : String?
-    let model : String?
-    let registrationNumber : String?
+struct carRegister          : Codable {
+    
+    let id                  : Int?
+    //let imagesUrl         : [String]?
+    let make                : String?
+    let model               : String?
+    let registrationNumber  : String?
 }
 
-struct responseModelRegister : Codable {
-    let car : carRegister?
-    let dob : String?
-    let driverNumber : String?
-    let driverToken : String?
-    let email : String?
-    let firstName : String?
-    let id : Int?
-    let lastName : String?
-    let password : String?
+struct responseModelRegister    : Codable {
+    
+    let car                     : carRegister?
+    let dob                     : String?
+    let driverNumber            : String?
+    let driverToken             : String?
+    let email                   : String?
+    let firstName               : String?
+    let id                      : Int?
+    let lastName                : String?
+    let password                : String?
     
 }
 
 class RegistrationVC: UIViewController {
 
-    @IBOutlet weak var firstNameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
-    @IBOutlet weak var doBirthField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var createPasswordField: UITextField!
+    @IBOutlet weak var firstNameField           : UITextField!
+    @IBOutlet weak var lastNameField            : UITextField!
+    @IBOutlet weak var doBirthField             : UITextField!
+    @IBOutlet weak var emailField               : UITextField!
+    @IBOutlet weak var createPasswordField      : UITextField!
     
-    @IBOutlet weak var createPasswordHidden: UIButton!
-    @IBOutlet weak var varifyPasswordHidden: UIButton!
+    @IBOutlet weak var createPasswordHidden     : UIButton!
+    @IBOutlet weak var varifyPasswordHidden     : UIButton!
     
-    @IBOutlet weak var varifyPasswordField: UITextField!
-    @IBOutlet weak var vehicleMakeField: UITextField!
-    @IBOutlet weak var vehicleModelField: UITextField!
-    @IBOutlet weak var vehicleRegistrationField: UITextField!
+    @IBOutlet weak var varifyPasswordField      : UITextField!
+    @IBOutlet weak var vehicleMakeField         : UITextField!
+    @IBOutlet weak var vehicleModelField        : UITextField!
+    @IBOutlet weak var vehicleRegistrationField : UITextField!
     
-    
-    var reponseSend: responseModelRegister!
-    
+    var reponseSend                             : responseModelRegister!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: Any)
+    {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func passwordSwitcher(_ sender: Any) {
+    @IBAction func passwordSwitcher(_ sender: Any)
+    {
         if createPasswordField.isSecureTextEntry {
             createPasswordField.isSecureTextEntry = false
         } else {
             createPasswordField.isSecureTextEntry = true
         }
         if createPasswordField.isSecureTextEntry {
-//            createPasswordHidden.setImage(UIImage(systemName: "eye") , for: .normal)
             createPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
             createPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
@@ -99,27 +100,23 @@ class RegistrationVC: UIViewController {
             //yyyy-mm-dd
             reponseSend =  responseModelRegister(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
             
-            print("register request : -> ", reponseSend as Any)
-            ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post) { responseVaue, successval, errorval, statusCode in
-                
+            ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post)
+            { responseVaue, successval, errorval, statusCode in
                 if successval ?? false {
                     print(responseVaue as Any)
                     if let responseHandler = Mapper<LoginResponseModel>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil{
-                                if let register = Mapper<LoginData>().map(JSONObject: responseHandler.data){
+                                if let register = Mapper<LoginData>().map(JSONObject: responseHandler.data)
+                                {
                                     print("User Email \(register.driver?.email ?? "")")
-
                                     do {
                                         let dataa = try responseVaue?.rawData()
-                                        
                                         UserDefaults.standard.set(dataa!, forKey: "loginUser")
-                                        
                                     } catch (let error) {
-                                        print(error)
+                                        print(error.localizedDescription)
                                     }
                                     DataManager.shared.LoginResponse = responseHandler
-                                    
                                     DispatchQueue.main.async {
                                         if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
                                             self.navigationController?.pushViewController(imagesViewController, animated: true)
@@ -141,10 +138,6 @@ class RegistrationVC: UIViewController {
         }
     }
 }
-
-
-
-
 
 extension Encodable {
     var dict: [String: Any]? {

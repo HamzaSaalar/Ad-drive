@@ -8,33 +8,30 @@
 import UIKit
 import SDWebImage
 
-class ImagesViewController: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var imageView = 0
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var firstImage: UIImageView!
-    @IBOutlet weak var secondImage: UIImageView!
-    @IBOutlet weak var thirdImage: UIImageView!
-    @IBOutlet weak var fourthImage: UIImageView!
+    @IBOutlet weak var titleLabel   : UILabel!
+    @IBOutlet weak var firstImage   : UIImageView!
+    @IBOutlet weak var secondImage  : UIImageView!
+    @IBOutlet weak var thirdImage   : UIImageView!
+    @IBOutlet weak var fourthImage  : UIImageView!
     
+    var imageView       = 0
     var fromHomeToImage = false
-    
-    var updatedImages = [false,false,false,false]
-    
-    var oldUrls = [String]()
+    var updatedImages   = [false,false,false,false]
+    var oldUrls         = [String]()
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-        firstImage.layer.cornerRadius = 10
-        secondImage.layer.cornerRadius = 10
-        thirdImage.layer.cornerRadius = 10
-        fourthImage.layer.cornerRadius = 10
-        
+        firstImage.layer.cornerRadius   = 10
+        secondImage.layer.cornerRadius  = 10
+        thirdImage.layer.cornerRadius   = 10
+        fourthImage.layer.cornerRadius  = 10
         
         if fromHomeToImage {
-            
             if let data = DataManager.shared.LoginResponse?.data?.driver?.car?.imagesUrl
             {
                 let img = #imageLiteral(resourceName: "placeholderImage")
@@ -50,14 +47,11 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
                     fourthImage.sd_setImage(with: URL(string: data[3]), placeholderImage: img)
                 }
             }
-            
         }
-        
-        
-        
     }
     
-    @IBAction func imageButtonPressed(_ sender: Any) {
+    @IBAction func imageButtonPressed(_ sender: Any)
+    {
         titleLabel.text = "hello."
         imageView = 1
         let imagePickerVC = UIImagePickerController()
@@ -66,21 +60,26 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
         present(imagePickerVC, animated: true)
     }
     
-    @IBAction func secondButtonPressed(_ sender: Any) {
+    @IBAction func secondButtonPressed(_ sender: Any)
+    {
         imageView = 2
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.sourceType = .photoLibrary
         imagePickerVC.delegate = self
         present(imagePickerVC, animated: true)
     }
-    @IBAction func thirdButtonPressed(_ sender: Any) {
+    
+    @IBAction func thirdButtonPressed(_ sender: Any)
+    {
         imageView = 3
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.sourceType = .photoLibrary
         imagePickerVC.delegate = self
         present(imagePickerVC, animated: true)
     }
-    @IBAction func fourthButtonPressed(_ sender: Any) {
+    
+    @IBAction func fourthButtonPressed(_ sender: Any)
+    {
         imageView = 4
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.sourceType = .photoLibrary
@@ -91,7 +90,6 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
         picker.dismiss(animated: true, completion: nil)
-        
         if let image = info[.originalImage] as? UIImage
         {
             if imageView == 1 {
@@ -110,7 +108,8 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
         }
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: Any)
+    {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -125,97 +124,75 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
     
     func updateImages()
     {
-        var imagesArray     = [UIImage]()
-        var urlsArray       = [String]()
+        var imagesArray     = [imageForMultipart]()
+        let carid           = DataManager.shared.LoginResponse?.data?.driver?.car?.id ?? 0
         
         if updatedImages[0] {
-            imagesArray.append(firstImage.image!)
-            urlsArray.append(oldUrls[0])
+            let img1 = imageForMultipart(image: firstImage.image!, name: "IMG_1_Car_\(carid)")
+            imagesArray.append(img1)
         }
         
         if updatedImages[1] {
-            imagesArray.append(secondImage.image!)
-            urlsArray.append(oldUrls[1])
+            let img1 = imageForMultipart(image: firstImage.image!, name: "IMG_2_Car_\(carid)")
+            imagesArray.append(img1)
         }
         
         if updatedImages[2] {
-            imagesArray.append(thirdImage.image!)
-            urlsArray.append(oldUrls[2])
+            let img1 = imageForMultipart(image: firstImage.image!, name: "IMG_2_Car_\(carid)")
+            imagesArray.append(img1)
         }
         
         if updatedImages[3] {
-            imagesArray.append(fourthImage.image!)
-            urlsArray.append(oldUrls[3])
+            let img1 = imageForMultipart(image: firstImage.image!, name: "IMG_4_Car_\(carid)")
+            imagesArray.append(img1)
         }
         
-        let carid = DataManager.shared.LoginResponse?.data?.driver?.car?.id ?? 0
+//        let url = "http://ad-drive.co.nz/ad-drive/api/auth/edit/upload/car"
+        let url = "http://ad-drive.co.nz/ad-drive/api/auth/upload/car/\(carid)"
         
-        let param = [
-            "carId"         : "\(carid)",
-            "oldImagesUrls" : urlsArray
-        ] as! [String: AnyObject]
-        
-        print(param)
-        
-        let params = [
-            "data" : param
-        ]
-        
-        print(params)
-        
-//        let url = "http://ad-drive.co.nz/ad-drive/api/auth/edit/upload/car?data=werewew"
-        let url = "http://ad-drive.co.nz/ad-drive/api/auth/edit/upload/car"
-        
-        
-        
-        ApiServices.multiPartAPIRequest(url: url, param: params as [String : Any], method: .post, photos: imagesArray, imageName: "files") { response, success, error, statusCode in
+        ApiServices.multiPartAPIRequest(url: url, param: nil, method: .post, photos: imagesArray, imageName: "files") { response, success, error, statusCode in
             
-            if success ?? false {
-                
+            if success ?? false
+            {
                 print(response as Any)
-                
-                
             }
         }
-
     }
     
-    
-    
-    
-    func firstTimeAdd() {
-        
-        
-        if firstImage.image != UIImage.init(named: "placeholderImage") ||  secondImage.image != UIImage.init(named: "placeholderImage") || thirdImage.image  != UIImage.init(named: "placeholderImage") || fourthImage.image  != UIImage.init(named: "placeholderImage") {
-            
+    func firstTimeAdd()
+    {
+        if firstImage.image != UIImage.init(named: "placeholderImage") ||  secondImage.image != UIImage.init(named: "placeholderImage") || thirdImage.image  != UIImage.init(named: "placeholderImage") || fourthImage.image  != UIImage.init(named: "placeholderImage")
+        {
             
             let carid = DataManager.shared.LoginResponse?.data?.driver?.car?.id ?? 0
             let url = "http://ad-drive.co.nz/ad-drive/api/auth/upload/car/\(carid)"
             
-            var imagesArray = [UIImage]()
+            var imagesArray = [imageForMultipart]()
             
-            imagesArray.append(firstImage.image!)
-            imagesArray.append(secondImage.image!)
-            imagesArray.append(thirdImage.image!)
-            imagesArray.append(fourthImage.image!)
+            let img1 = imageForMultipart(image: firstImage.image!, name: "IMG_1_Car_\(carid)")
+            imagesArray.append(img1)
+            let img2 = imageForMultipart(image: firstImage.image!, name: "IMG_2_Car_\(carid)")
+            imagesArray.append(img2)
+            let img3 = imageForMultipart(image: firstImage.image!, name: "IMG_3_Car_\(carid)")
+            imagesArray.append(img3)
+            let img4 = imageForMultipart(image: firstImage.image!, name: "IMG_4_Car_\(carid)")
+            imagesArray.append(img4)
             
             
-            ApiServices.multiPartAPIRequest(url: url, param: nil, method: .post, photos: imagesArray, imageName: "files") { response, success, error, statusCode in
-                
-                if success ?? false {
+            ApiServices.multiPartAPIRequest(url: url, param: nil, method: .post, photos: imagesArray, imageName: "files")
+            { response, success, error, statusCode in
+                if success ?? false
+                {
                     print(response as Any)
-                    
                     let imagesResponse = response?["data"].arrayValue
-                    
                     var imagesArray = [String]()
-                    for response in imagesResponse ?? [] {
+                    for response in imagesResponse ?? []
+                    {
                         print(response.stringValue)
                         imagesArray.append(response.stringValue)
                     }
                     DataManager.shared.LoginResponse?.data?.driver?.car?.imagesUrl = imagesArray
-
                     if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllowLocationServicesVC") as? AllowLocationServicesVC {
-                        
                         self.navigationController?.pushViewController(controller, animated: true)
                     }
                 }
@@ -223,10 +200,5 @@ class ImagesViewController: UIViewController , UIImagePickerControllerDelegate ,
         } else {
             print("please select all four images")
         }
-        
     }
-    
-    
-    
-    
 }

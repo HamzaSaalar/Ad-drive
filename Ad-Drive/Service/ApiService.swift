@@ -8,6 +8,14 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import UIKit
+
+
+struct imageForMultipart
+{
+    var image : UIImage?
+    var name : String?
+}
 
 
 class ApiServices
@@ -49,7 +57,7 @@ class ApiServices
         }
     }
     
-    class func multiPartAPIRequest(url: String, param: [String: Any]?, method: HTTPMethod, photos: [UIImage]?, imageName: String ,completion: @escaping (JSON?, Bool?, Error?, Int?) -> Void)
+    class func multiPartAPIRequest(url: String, param: [String: Any]?, method: HTTPMethod, photos: [imageForMultipart]?, imageName: String ,completion: @escaping (JSON?, Bool?, Error?, Int?) -> Void)
     {
         
         Alamofire.upload(multipartFormData: { (multipart) in
@@ -57,9 +65,14 @@ class ApiServices
             {
                 multipart.append("\(value)".data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!, withName: key)
             }
+            
             for photo in photos ?? [] {
-                multipart.append(photo.jpegData(compressionQuality: 0.5) ?? Data(), withName: "\(imageName)", fileName: "\(Date().timeIntervalSince1970)", mimeType: "image/jpeg")
+                multipart.append(photo.image!.jpegData(compressionQuality: 0.5) ?? Data(), withName: "\(imageName)", fileName: photo.name ?? "", mimeType: "image/jpeg")
             }
+            
+//            for photo in photos ?? [] {
+//                multipart.append(photo.image!.jpegData(compressionQuality: 0.5) ?? Data(), withName: "\(imageName)", fileName: "\(Date().timeIntervalSince1970)", mimeType: "image/jpeg")
+//            }
 //            for photo in photos ?? [] {
 //                multipart.append(photo.jpegData(compressionQuality: 0.5) ?? Data(), withName: "\(imageName)[]", fileName: "\(Date().timeIntervalSince1970)", mimeType: "image/jpeg")
 //            }

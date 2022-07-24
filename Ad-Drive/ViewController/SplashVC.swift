@@ -11,33 +11,28 @@ import ObjectMapper
 class SplashVC: UIViewController {
     
     //MARK: - Properties
-    var isAppStarted = false
-    var imagescreen = false
-
-    @IBOutlet weak var mainView: CustomView!
-    @IBOutlet weak var nameLabel: UILabel!
+        
+    @IBOutlet weak var mainView     : CustomView!
+    @IBOutlet weak var nameLabel    : UILabel!
     
+    var isAppStarted                = false
+    var imagescreen                 = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let result = UserDefaults.standard.value(forKey: "loginUser") as? Data {
-            
+        if let result = UserDefaults.standard.value(forKey: "loginUser") as? Data
+        {
             do{
                 let json = try JSONSerialization.jsonObject(with: result, options: []) as? [String : Any]
-                
-                
-                if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: json) {
-                    
+                if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: json)
+                {
                     DataManager.shared.LoginResponse = dataobj
-                    
                     if dataobj.data?.driver?.car?.imagesUrl?.count ?? 0 == 0 {
-                        // go to imageScreen
                         self.imagescreen = true
                     }
-                    
                     self.isAppStarted = true
                 }
-                
             } catch {
                 print("erroMsg")
             }
@@ -55,18 +50,16 @@ class SplashVC: UIViewController {
             } else { // home screen
                 
                 // if location permission not allowed
-//                if !DataManager.shared.locationPermission()
-//                {
-//                    DispatchQueue.main.async {
-//                        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllowLocationServicesVC") as? AllowLocationServicesVC {
-//
-//                            self.navigationController?.pushViewController(controller, animated: true)
-//                        }
-//                    }
-//                    return
-//                }
-                
-                
+                //                if !DataManager.shared.locationPermission()
+                //                {
+                //                    DispatchQueue.main.async {
+                //                        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllowLocationServicesVC") as? AllowLocationServicesVC {
+                //
+                //                            self.navigationController?.pushViewController(controller, animated: true)
+                //                        }
+                //                    }
+                //                    return
+                //                }
                 DispatchQueue.main.async {
                     if let tabBarVC : TabBarVC = TabBarVC.instantiateViewControllerFromStoryboard() {
                         self.navigationController?.pushViewController(tabBarVC, animated: true)
@@ -77,12 +70,12 @@ class SplashVC: UIViewController {
             navigateUserToAppropriateScreen()
         }
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        if isAppStarted == true {
-//            navigateUserToAppropriateScreen()
-//        }
+        //        if isAppStarted == true {
+        //            navigateUserToAppropriateScreen()
+        //        }
     }
     
     
@@ -94,10 +87,10 @@ class SplashVC: UIViewController {
     @objc func navigateUserToAppropriateScreen() {
         
         // Set to true, can verify user redirected first time from splash screen.
-//        isAppStarted = true
+        //        isAppStarted = true
         // Redirect user to login screen.
-            self.redirectToLoginScreen()
-        }
+        self.redirectToLoginScreen()
+    }
     
     func redirectToLoginScreen() {
         DispatchQueue.main.async {
@@ -106,10 +99,7 @@ class SplashVC: UIViewController {
             }
         }
     }
-
-
 }
-
 
 extension String {
     func toJSON() -> Any? {

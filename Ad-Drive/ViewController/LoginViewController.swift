@@ -18,21 +18,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        userNameField.text = "qasim1@gmail.com"
+        userNameField.text = "qasim2@gmail.com"
         passwordField.text = "123123123"
-
-        // Do any additional setup after loading the view.
     }
-    
-//    func ver(email : String?, password:String){
-//        if email != ""{
-//        }
-//    }
 
     
-    @IBAction func registerButtonPressed(_ sender: Any) {
-        
+    @IBAction func registerButtonPressed(_ sender: Any)
+    {
         DispatchQueue.main.async {
             if let registrationVC : RegistrationVC = RegistrationVC.instantiateViewControllerFromStoryboard() {
                 self.navigationController?.pushViewController(registrationVC, animated: true)
@@ -40,48 +32,36 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func actionSignin(_ sender: Any) {
-        
-        
+    @IBAction func actionSignin(_ sender: Any)
+    {
         if userNameField.text != "" || passwordField.text != "" {
-            
-            
             let params = [
                 "email"         : self.userNameField.text ?? "",
                 "password"      : self.passwordField.text ?? "",
                 "type"          : "d"
             ]
             
-            
-            ApiServices.CalAPIResponse(url: Endpoints.login, param: params, method: .post) { responseVaue, successval, errorval, statusCode in
-                
+            ApiServices.CalAPIResponse(url: Endpoints.login, param: params, method: .post)
+            { responseVaue, successval, errorval, statusCode in
                 if successval != nil {
                     print(responseVaue as Any)
-
-                    if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: responseVaue?.rawValue) {
-                        
+                    if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: responseVaue?.rawValue)
+                    {
                         do {
                             let dataa = try responseVaue?.rawData()
-                            
                             UserDefaults.standard.set(dataa!, forKey: "loginUser")
-                            
                         } catch (let error) {
                             print(error)
                         }
                         DataManager.shared.LoginResponse = dataobj
-                        
-                        
-                        if dataobj.data?.driver?.car?.imagesUrl?.count ?? 0 > 0 { // contain Images Directly navigate to Home
-                            
+                        if dataobj.data?.driver?.car?.imagesUrl?.count ?? 0 > 0
+                        { // contain Images Directly navigate to Home
                             DispatchQueue.main.async {
                                 if let tabBarVC : TabBarVC = TabBarVC.instantiateViewControllerFromStoryboard() {
                                     self.navigationController?.pushViewController(tabBarVC, animated: true)
                                 }
                             }
-                            
                         } else { // send to images controller
-                            
                             DispatchQueue.main.async {
                                 if let imagesViewController : ImagesViewController = ImagesViewController.instantiateViewControllerFromStoryboard() {
                                     self.navigationController?.pushViewController(imagesViewController, animated: true)
@@ -93,18 +73,13 @@ class LoginViewController: UIViewController {
                     print(errorval?.localizedDescription ?? "")
                 }
             }
-
         } else {
             print("Please fill both the fields")
         }
-        
-        
-        
     }
     
-    
-    
-    @IBAction func showPasswordPressed(_ sender: Any) {
+    @IBAction func showPasswordPressed(_ sender: Any)
+    {
         if passwordField.isSecureTextEntry {
             passwordField.isSecureTextEntry = false
         } else {
@@ -117,15 +92,12 @@ class LoginViewController: UIViewController {
             showHideButton.setImage(UIImage.init(named: "eye"), for: .normal)
         }
     }
-    
-
 }
 
-extension LoginViewController : UITextFieldDelegate {
-    
-    
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+extension LoginViewController : UITextFieldDelegate
+{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
         if textField == userNameField{
             if range.location == 0 && string == " "{
                 return false
@@ -133,13 +105,7 @@ extension LoginViewController : UITextFieldDelegate {
             if textField.text!.contains(" ") && string == " " {
                 return false
             }
-//            if range.location >= 11{
-//                return false
-//            }
-           
         }
-       
-        
         else if textField == passwordField{
             if range.location >= 10{
                 return false
@@ -150,5 +116,4 @@ extension LoginViewController : UITextFieldDelegate {
         }
         return true
     }
-    
 }

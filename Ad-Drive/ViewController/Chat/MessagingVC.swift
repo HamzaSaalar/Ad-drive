@@ -9,21 +9,22 @@ import UIKit
 
 class MessagingVC: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var textViewMessage : UITextView!
-    @IBOutlet weak var buttonSend : UIButton!
+    @IBOutlet weak var tableView        : UITableView!
+    @IBOutlet weak var textViewMessage  : UITextView!
+    @IBOutlet weak var buttonSend       : UIButton!
     
-    var countval = 0
+    var countval                        = 0
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
+        tableView.delegate              = self
+        tableView.dataSource            = self
+        tableView.separatorStyle        = .none
+        
         tableView.register(UINib(nibName: "ChatMeTVCell", bundle: nil), forCellReuseIdentifier: "ChatMeTVCell")
         tableView.register(UINib(nibName: "ChatOtherTVCell", bundle: nil), forCellReuseIdentifier: "ChatOtherTVCell")
-        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.countval = 15
@@ -38,18 +39,17 @@ class MessagingVC: UIViewController {
     @IBAction func actionSend(_ sender: Any) {
      
     }
-    
 }
 
 extension MessagingVC: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return countval
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         if indexPath.row % 2 == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMeTVCell", for: indexPath) as? ChatMeTVCell {
                 cell.viewBack.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 8)    
@@ -60,13 +60,7 @@ extension MessagingVC: UITableViewDelegate, UITableViewDataSource {
                 cell.viewBack.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 8)
                 return cell
             }
-            
         }
-        
         return UITableViewCell()
-        
     }
-    
-    
-    
 }

@@ -49,7 +49,7 @@ class DetailViewController: UIViewController {
         vehicleMakeField.text           = info?.car?.make ?? ""
         vehicleModelField.text          = info?.car?.model ?? ""
         vehicleRegistrationField.text   = info?.car?.registrationNumber ?? ""
-        
+
     }
     
     
@@ -99,16 +99,18 @@ class DetailViewController: UIViewController {
     {
         if !(firstNameField.text?.isEmpty ?? false) || !(lastNameField.text?.isEmpty ?? false) || !(doBirthField.text?.isEmpty ?? false) || !(emailField.text?.isEmpty ?? false) || !(createPasswordField.text?.isEmpty ?? false) || !(varifyPasswordField.text?.isEmpty ?? false)
         {
-            let carModel = carRegister(id: 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: vehicleRegistrationField.text ?? "")
+            
+            
+            let carModel = carRegister(id: userData.driver?.car?.id ?? 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: vehicleRegistrationField.text ?? "")
             //yyyy-mm-dd
-            reponseSend =  responseModelRegister(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
+            reponseSend =  responseModelRegister(car: carModel, dob: doBirthField.text ?? "", driverNumber: userData.driver?.driverNumber ?? "", driverToken: userData.driver?.driverToken ?? "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: userData.driver?.id ?? 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
             
             print("register request : -> ", reponseSend as Any)
             ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post) { responseVaue, successval, errorval, statusCode in
                 
                 if successval ?? false {
                     print(responseVaue as Any)
-                    if let responseHandler = Mapper<LoginResponseModel>().map(JSON: responseVaue?.dict ?? [:]) {
+                    if let responseHandler = Mapper<updateUserData>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil{
                                 if let register = Mapper<LoginData>().map(JSONObject: responseHandler.data){
@@ -122,7 +124,7 @@ class DetailViewController: UIViewController {
                                     } catch (let error) {
                                         print(error)
                                     }
-                                    DataManager.shared.LoginResponse = responseHandler
+//                                    DataManager.shared.LoginResponse = responseHandler
                                     
                                     print("Data updated successfully.....")
 
@@ -141,8 +143,86 @@ class DetailViewController: UIViewController {
             print("please fill the fields")
         }
     }
-    
-    
-    
+}
+
+
+
+struct updateUserData : Mappable {
+    var code : Int?
+    var error : String?
+    var status : String?
+    var data : DataUserUpdate?
+    var message : String?
+
+    init?(map: Map) {
+
+    }
+
+    mutating func mapping(map: Map) {
+
+        code <- map["code"]
+        error <- map["error"]
+        status <- map["status"]
+        data <- map["data"]
+        message <- map["message"]
+    }
 
 }
+
+
+struct DataUserUpdate : Mappable
+{
+    var email : String?
+    var lastName : String?
+    var driverToken : String?
+    var driverNumber : String?
+    var password : String?
+    var dob : String?
+    var id : Int?
+    var compaign : String?
+    var car : CarRegister?
+    var firstName : String?
+
+    init?(map: Map) {
+    }
+
+    mutating func mapping(map: Map) {
+
+        email <- map["email"]
+        lastName <- map["lastName"]
+        driverToken <- map["driverToken"]
+        driverNumber <- map["driverNumber"]
+        password <- map["password"]
+        dob <- map["dob"]
+        id <- map["id"]
+        compaign <- map["compaign"]
+        car <- map["car"]
+        firstName <- map["firstName"]
+    }
+}
+
+
+
+struct CarRegister : Mappable {
+    var id : Int?
+    var imagesUrl : String?
+    var make : String?
+    var model : String?
+    var registrationNumber : String?
+
+    init?(map: Map) {
+
+    }
+
+    mutating func mapping(map: Map) {
+
+        id <- map["id"]
+        imagesUrl <- map["imagesUrl"]
+        make <- map["make"]
+        model <- map["model"]
+        registrationNumber <- map["registrationNumber"]
+    }
+
+}
+
+
