@@ -21,23 +21,28 @@ class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         if let result = UserDefaults.standard.value(forKey: "loginUser") as? Data
         {
             do{
-                let json = try JSONSerialization.jsonObject(with: result, options: []) as? [String : Any]
-                if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: json)
-                {
-                    DataManager.shared.LoginResponse = dataobj
-                    if dataobj.data?.driver?.car?.imagesUrl?.count ?? 0 == 0 {
-                        self.imagescreen = true
-                    }
-                    self.isAppStarted = true
+                //let json = try JSONSerialization.jsonObject(with: result, options: []) as? [String : Any]
+                let jsonDecoder = JSONDecoder()
+                let UserData = try jsonDecoder.decode(userDetailData.self, from: result)
+                
+                DataManager.shared.userData = UserData
+                if UserData.carImagesUrl?.count ?? 0 == 0 {
+                    self.imagescreen = true
                 }
+                self.isAppStarted = true
             } catch {
                 print("erroMsg")
             }
         }
-        
         if isAppStarted {
             // if not contain images then image screen //
             if imagescreen {
@@ -46,20 +51,20 @@ class SplashVC: UIViewController {
                         self.navigationController?.pushViewController(imagesViewController, animated: true)
                     }
                 }
+            } else { ///--->-->///////******** home screen ********///////      <---!****^^.-_-.^^^^^****!-->????^%^????<-->
                 
-            } else { // home screen
+                ///if location permission not allowed
+                ///if !DataManager.shared.locationPermission()
+                ///{
+                ///DispatchQueue.main.async {
+                ///if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllowLocationServicesVC") as? AllowLocationServicesVC {
+                ///self.navigationController?.pushViewController(controller, animated: true)
+                ///}
+                ///}
+                ///return
+                ///}
+                ///}
                 
-                // if location permission not allowed
-                //                if !DataManager.shared.locationPermission()
-                //                {
-                //                    DispatchQueue.main.async {
-                //                        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllowLocationServicesVC") as? AllowLocationServicesVC {
-                //
-                //                            self.navigationController?.pushViewController(controller, animated: true)
-                //                        }
-                //                    }
-                //                    return
-                //                }
                 DispatchQueue.main.async {
                     if let tabBarVC : TabBarVC = TabBarVC.instantiateViewControllerFromStoryboard() {
                         self.navigationController?.pushViewController(tabBarVC, animated: true)
@@ -70,7 +75,7 @@ class SplashVC: UIViewController {
             navigateUserToAppropriateScreen()
         }
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //        if isAppStarted == true {

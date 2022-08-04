@@ -17,7 +17,6 @@ struct imageForMultipart
     var name : String?
 }
 
-
 class ApiServices
 {
 

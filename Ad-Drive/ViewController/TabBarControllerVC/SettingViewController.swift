@@ -32,8 +32,34 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func notificationPressed(_ sender: Any) {
-        self.titleLabel.text = "hello"
+        //        self.titleLabel.text = "hello"
+        
+        let alertController = UIAlertController(title: "Logout!", message: "Are you sure you want to logout?", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Yes", style: .default)
+        { action in
+            UserDefaults.standard.removeObject(forKey: "loginUser")
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        alertController.addAction(action)
+        alertController.addAction(cancel)
+        present(alertController, animated: true, completion: nil)
     }
+    
+    func getWindow() -> UIWindow? {
+        return UIApplication.shared.keyWindow
+    }
+
+     func resetViewController() {
+        let window = getWindow()
+        
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "")
+        
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
+    }
+    
     
     //  resize the switches inside the view
     func layoutSwitch(){
@@ -41,7 +67,6 @@ class SettingViewController: UIViewController {
         notificationSwitch.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         motionFitnessSwitch.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
-    
     
     func setupView()
     {

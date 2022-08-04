@@ -7,6 +7,7 @@
 
 import UIKit
 import ObjectMapper
+import KRProgressHUD
 
 struct carRegister          : Codable {
     
@@ -99,17 +100,29 @@ class RegistrationVC: UIViewController {
             let carModel = carRegister(id: 0, make: self.vehicleMakeField.text ?? "", model: vehicleModelField.text ?? "", registrationNumber: vehicleRegistrationField.text ?? "")
             //yyyy-mm-dd
             reponseSend =  responseModelRegister(car: carModel, dob: doBirthField.text ?? "", driverNumber: "", driverToken: "", email: emailField.text ?? "", firstName: firstNameField.text ?? "", id: 0, lastName: lastNameField.text ?? "", password: createPasswordField.text ?? "")
-            
+            KRProgressHUD.show()
             ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post)
             { responseVaue, successval, errorval, statusCode in
                 if successval ?? false {
+                    KRProgressHUD.dismiss()
                     print(responseVaue as Any)
                     if let responseHandler = Mapper<LoginResponseModel>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil{
-                                if let register = Mapper<LoginData>().map(JSONObject: responseHandler.data)
+                                
+                                DispatchQueue.main.async {
+                                    if let imagesViewController : LoginViewController = LoginViewController.instantiateViewControllerFromStoryboard() {
+                                        self.navigationController?.pushViewController(imagesViewController, animated: true)
+                                    }
+                                }
+                                
+                               /* if let register = Mapper<updateUserData>().map(JSONObject: responseHandler.data)
                                 {
-                                    print("User Email \(register.driver?.email ?? "")")
+                                    
+                                    
+//                                    let user = LoginData(
+                                    
+//                                    print("User Email \(register.driver?.email ?? "")")
                                     do {
                                         let dataa = try responseVaue?.rawData()
                                         UserDefaults.standard.set(dataa!, forKey: "loginUser")
@@ -122,19 +135,22 @@ class RegistrationVC: UIViewController {
                                             self.navigationController?.pushViewController(imagesViewController, animated: true)
                                         }
                                     }
-                                }
+                                }*/
                             }
                         }else {
                             print(responseHandler.error ?? "")
+                            DataManager.Alertbox(message: responseHandler.error ?? "", vc: self)
                         }
                     }
                 } else {
                     print(errorval?.localizedDescription ?? "")
+                    DataManager.Alertbox(message: errorval?.localizedDescription ?? "", vc: self)
                 }
             }
         }
         else{
             print("please fill the fields")
+            DataManager.Alertbox(message: "please fill the fields", vc: self)
         }
     }
 }

@@ -203,6 +203,7 @@
 		CE56017E287ED6C100B69767 /* ChatOtherTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatOtherTVCell.xib; sourceTree = "<group>"; };
 		CE560181287F46A400B69767 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		CE560183287FF54700B69767 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CE9B372928993E0900210088 /* Ad-Drive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ad-Drive.entitlements"; sourceTree = "<group>"; };
 		D21496A6047D067D94823DF7 /* Pods-Ad-DriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.debug.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC77DAB9AC96B773B98158D7 /* Pods-Ad-DriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.release.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,6 +290,7 @@
 		8878B1AF284762D6008AD11D /* Ad-Drive */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B372928993E0900210088 /* Ad-Drive.entitlements */,
 				CE27FC00286C77D900A01595 /* Service */,
 				CE27FBFF286C77D100A01595 /* Models */,
 				88798BE72865B7DB0037B2ED /* AppDelegate */,
@@ -1010,9 +1012,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ad-Drive/Ad-Drive.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5N4366G57A;
+				DEVELOPMENT_TEAM = XBW4V86AGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ad-Drive/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.";
@@ -1031,6 +1035,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ad-Drive.project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1043,9 +1048,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ad-Drive/Ad-Drive.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5N4366G57A;
+				DEVELOPMENT_TEAM = XBW4V86AGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ad-Drive/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.";
@@ -1064,6 +1071,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ad-Drive.project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1078,7 +1086,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9WY2C7P6M2;
+				DEVELOPMENT_TEAM = XBW4V86AGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -1099,7 +1107,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9WY2C7P6M2;
+				DEVELOPMENT_TEAM = XBW4V86AGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -1119,7 +1127,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9WY2C7P6M2;
+				DEVELOPMENT_TEAM = XBW4V86AGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.AzerNar-.Ad-DriveUITests";
@@ -1138,7 +1146,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9WY2C7P6M2;
+				DEVELOPMENT_TEAM = XBW4V86AGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.AzerNar-.Ad-DriveUITests";

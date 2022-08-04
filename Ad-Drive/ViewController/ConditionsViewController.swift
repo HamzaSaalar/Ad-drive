@@ -33,6 +33,7 @@ class ConditionsViewController: UIViewController {
             checkFirstImage.image   = UIImage(named: "rectangle_3")
         }
     }
+    
     @IBAction func checkSecondPressed(_ sender: Any) {
         if secondHideView.isHidden {
             secondHideView.isHidden = false

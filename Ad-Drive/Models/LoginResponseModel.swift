@@ -80,3 +80,32 @@ struct LoginDriver : Mappable {
     }
 
 }
+
+
+struct userDetailData: Codable {
+    
+    var token : String?
+    var driverToken : String?
+    var driverNumber : String?
+    var email : String?
+    var password : String?
+    var lastName : String?
+//    var compaign : Compaign?
+    var id : Int?
+    var firstName : String?
+    var dob : String?
+//    var car : Car?
+    
+    var compaignName : String?
+    var compaignDescription : String?
+    var compaignEndDate : String?
+    var compaignId : Int?
+    var compaignStartDate : String?
+    var compaignStatus : String?
+    
+    var carId : Int?
+    var carImagesUrl : [String]?
+    var carMake : String?
+    var carModel : String?
+    var carRegistrationNumber : String?
+}

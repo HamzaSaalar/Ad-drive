@@ -15,7 +15,8 @@ import UserNotifications
 class DataManager : NSObject {
     
     static let shared               = DataManager()
-    var LoginResponse               : LoginResponseModel? = nil
+//    var LoginResponse               : userDetailData ? = nil //: LoginResponseModel? = nil
+    var userData                    : userDetailData?
     private let locationManager     = CLLocationManager()
     
     
@@ -81,5 +82,21 @@ class DataManager : NSObject {
         }
     }
     
+    static func AlertboxWithBackOption(message: String, vc: UIViewController, completion: @escaping () -> (Void)) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            vc.dismiss(animated: false, completion: nil)
+            completion()
+        }))
+        vc.present(alert, animated: false, completion: nil)
+    }
     
+    static func Alertbox(message: String, vc: UIViewController){
+        let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+
+        alert.addAction(OKAction)
+        vc.present(alert, animated: true, completion: nil)
+    }
+
 }

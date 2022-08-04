@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMotionUsageDescription</key>
-	<string>Ad-Drive needs to access motion data to improve drive detection accuracy</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Need Media access</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>To record your trips, Ad-Drive Automatically collects your location when you drive even when the app is in the background. If you only “Allow Once” access to your location, some features may not work while this app is in the background.</string>
-	<key>CFBundleIdentifier</key>
-	<string></string>
+	<string>Need Location Permission</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need Location Permission</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -42,6 +40,7 @@
 	<array>
 		<string>fetch</string>
 		<string>location</string>
+		<string>processing</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UIStatusBarStyle</key>
