@@ -67,7 +67,7 @@ class DetailViewController: UIViewController {
 //            createPasswordHidden.setImage(UIImage(systemName: "eye") , for: .normal)
             createPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
-            createPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
+            createPasswordHidden.setImage(UIImage.init(named: "Hide") , for: .normal)
         }
 
     }
@@ -81,7 +81,7 @@ class DetailViewController: UIViewController {
         if varifyPasswordField.isSecureTextEntry {
             varifyPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
-            varifyPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
+            varifyPasswordHidden.setImage(UIImage.init(named: "Hide") , for: .normal)
         }
     }
     
@@ -143,15 +143,10 @@ class DetailViewController: UIViewController {
     }
     func displayingDate () {
         
-        let dateFormatter1 = DateFormatter()
-        //dateFormatter1.dateStyle = .medium
-        dateFormatter1.dateFormat = "yyyy-mm-dd"
-        //dateFormatter1.timeStyle = .none
-//        startTimePicker.maximumDate = Date()
-        
-        doBirthField.text = dateFormatter1.string(from: startTimePicker.date)
+        let dateFormatter1          = DateFormatter()
+        dateFormatter1.dateFormat   = "yyyy-MM-dd"
+        doBirthField.text           = dateFormatter1.string(from: startTimePicker.date)
         doBirthField.resignFirstResponder()
-        
     }
     
     @objc func cancelClickStart() {
@@ -186,7 +181,7 @@ class DetailViewController: UIViewController {
                     if let responseHandler = Mapper<updateUserData>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {
                             if responseHandler.error == nil {
-                                if let _ = Mapper<updateUserData>().map(JSONObject: responseHandler.data) {
+//                                if let _ = Mapper<updateUserData>().map(JSONObject: responseHandler.data) {
 
                                     let uData = userDetailData(token: self.userData.token,
                                                                driverToken: self.userData.driverToken,
@@ -224,7 +219,7 @@ class DetailViewController: UIViewController {
                                     KRProgressHUD.showSuccess(withMessage: "Data updated successfully")
                                     
                                     print("Data updated successfully.....")
-                                }
+//                                }
                             }
                         }else {
                            // print(responseHandler.error ?? "")

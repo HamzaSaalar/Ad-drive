@@ -50,6 +50,8 @@ class RegistrationVC: UIViewController {
     
     var reponseSend                             : responseModelRegister!
     
+    var startTimePicker         = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,7 +72,7 @@ class RegistrationVC: UIViewController {
         if createPasswordField.isSecureTextEntry {
             createPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
-            createPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
+            createPasswordHidden.setImage(UIImage.init(named: "Hide") , for: .normal)
         }
     }
 
@@ -84,14 +86,84 @@ class RegistrationVC: UIViewController {
         if varifyPasswordField.isSecureTextEntry {
             varifyPasswordHidden.setImage(UIImage.init(named: "eye") , for: .normal)
         } else {
-            varifyPasswordHidden.setImage(UIImage.init(named: "eye.slash") , for: .normal)
+            varifyPasswordHidden.setImage(UIImage.init(named: "Hide") , for: .normal)
         }
     }
     
-    @IBAction func ButtonOnDate(_ sender: Any)
+//    @IBAction func ButtonOnDate(_ sender: Any)
+//    {
+//        setupSTimePicker(doBirthField)
+//    }
+
+    @IBAction func DOBTapped(_ sender: Any) ///TEXTFIELD TAPPED
     {
+        setupSTimePicker(self.doBirthField)
+    }
+    
+    
+    func setupSTimePicker(_ textField : UITextField) {
+        
+        ///// DATE PICKER
+        self.startTimePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.startTimePicker.backgroundColor = UIColor.white
+        
+//        startTimePicker.locale = Locale(identifier: "en_GB")
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-mm-dd" //"HH:mm"
+        
+        //// AS THIS IS START SO SET MAX TIME
+//        if #available(iOS 15, *) {
+//            startTimePicker.maximumDate = .now
+//        } else {
+//            // Fallback on earlier versions
+//        }
+        
+        startTimePicker.maximumDate = Date()
+        
+        self.startTimePicker.datePickerMode = UIDatePicker.Mode.date
+        textField.inputView = self.startTimePicker
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.black
+        toolBar.sizeToFit()
+        if #available(iOS 13.4, *) {
+            startTimePicker.preferredDatePickerStyle = .wheels
+            toolBar.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40)
+        }
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneClickStart(_:)))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClickStart))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+    }
+    
+    @objc func doneClickStart(_ sender: UIDatePicker) {
+        displayingDate()
+    }
+    func displayingDate () {
+        
+        let dateFormatter1 = DateFormatter()
+        //dateFormatter1.dateStyle = .medium
+        dateFormatter1.dateFormat = "yyyy-MM-dd"
+        //dateFormatter1.timeStyle = .none
+//        startTimePicker.maximumDate = Date()
+        
+        doBirthField.text = dateFormatter1.string(from: startTimePicker.date)
+        doBirthField.resignFirstResponder()
         
     }
+    
+    @objc func cancelClickStart() {
+        doBirthField.resignFirstResponder()
+    }
+    
+    
+    
         
     @IBAction func nextButtonPressed(_ sender: Any)
     {
@@ -103,8 +175,8 @@ class RegistrationVC: UIViewController {
             KRProgressHUD.show()
             ApiServices.CalAPIResponse(url: Endpoints.register, param: reponseSend.dict, method: .post)
             { responseVaue, successval, errorval, statusCode in
+                KRProgressHUD.dismiss()
                 if successval ?? false {
-                    KRProgressHUD.dismiss()
                     print(responseVaue as Any)
                     if let responseHandler = Mapper<LoginResponseModel>().map(JSON: responseVaue?.dict ?? [:]) {
                         if responseHandler.code == 200 {

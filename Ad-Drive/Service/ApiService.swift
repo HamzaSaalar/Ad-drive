@@ -40,7 +40,19 @@ class ApiServices
         }
     }
     
-    
+    class func CalAPIResponsewithHeader(url:String, header: [String:String], param: [String:Any]?, method: HTTPMethod, completion: @escaping (JSON?, Bool?, Error?, Int?) -> Void) {
+         
+        Alamofire.request(url, method: method, parameters: param, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+             if response.result.isSuccess {
+                 let responseJSON = JSON(response.result.value as AnyObject?)
+                
+                 return completion(responseJSON, true, nil,response.response?.statusCode)
+             } else {
+                 return completion(nil, false, response.error, response.response?.statusCode)
+             }
+         }
+     }
+
     class func SendNotification(url:String, params: [String:Any]?, method: HTTPMethod, completion: @escaping (JSON?, Bool?, Error?,Int?) -> Void) {
         
         Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in

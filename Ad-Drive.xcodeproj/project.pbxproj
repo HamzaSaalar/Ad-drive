@@ -91,6 +91,7 @@
 		CE560180287ED6C100B69767 /* ChatOtherTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE56017E287ED6C100B69767 /* ChatOtherTVCell.xib */; };
 		CE560182287F46A400B69767 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560181287F46A400B69767 /* LoginResponseModel.swift */; };
 		CE560184287FF54700B69767 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE560183287FF54700B69767 /* DataManager.swift */; };
+		CE9DB088289B9D2500EE05A0 /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DB087289B9D2500EE05A0 /* ChangePasswordController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,7 @@
 		CE560181287F46A400B69767 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		CE560183287FF54700B69767 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE9B372928993E0900210088 /* Ad-Drive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ad-Drive.entitlements"; sourceTree = "<group>"; };
+		CE9DB087289B9D2500EE05A0 /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
 		D21496A6047D067D94823DF7 /* Pods-Ad-DriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.debug.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC77DAB9AC96B773B98158D7 /* Pods-Ad-DriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ad-DriveTests.release.xcconfig"; path = "Target Support Files/Pods-Ad-DriveTests/Pods-Ad-DriveTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -344,6 +346,7 @@
 				8828837E286249EA00F7E3C8 /* ImagesViewController.swift */,
 				880EB5DB28647CB100AE058D /* FinishInformationVC.swift */,
 				88AF8860285DF1E20035B0C6 /* LoginViewController.swift */,
+				CE9DB087289B9D2500EE05A0 /* ChangePasswordController.swift */,
 				8828838128632E8000F7E3C8 /* GalleryViewController.swift */,
 				CE56016F287ECD7F00B69767 /* Chat */,
 				880EB5D628644C2E00AE058D /* TabBarControllerVC */,
@@ -826,6 +829,7 @@
 				CE560182287F46A400B69767 /* LoginResponseModel.swift in Sources */,
 				880EB5D428644ACA00AE058D /* AllowLocationServicesVC.swift in Sources */,
 				880EB5D8286467A800AE058D /* WelcomeAppVC.swift in Sources */,
+				CE9DB088289B9D2500EE05A0 /* ChangePasswordController.swift in Sources */,
 				884E63C82860622000D1A075 /* DetailViewController.swift in Sources */,
 				8878B1B3284762D6008AD11D /* SceneDelegate.swift in Sources */,
 				88288387286333C700F7E3C8 /* ImagesCollectionViewCell.swift in Sources */,

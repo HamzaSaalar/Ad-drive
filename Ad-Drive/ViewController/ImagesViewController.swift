@@ -17,6 +17,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var thirdImage   : UIImageView!
     @IBOutlet weak var fourthImage  : UIImageView!
     @IBOutlet weak var buttonBack   : UIButton!
+    @IBOutlet weak var buttonUpdate : UIButton!
     
     var imageView       = 0
     var fromHomeToImage = false
@@ -34,12 +35,14 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
         fourthImage.layer.cornerRadius  = 10
         
         if fromHomeToImage {
+            buttonUpdate.titleLabel?.text = "Update Images"
             if let data = DataManager.shared.userData?.carImagesUrl {
                 if data.count > 0 {
                     setimages(data: data)
                 }
             }
         } else {
+            buttonUpdate.titleLabel?.text = "Next"
             buttonBack.isHidden = true
         }
     }
@@ -62,40 +65,56 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func imageButtonPressed(_ sender: Any)
     {
-        titleLabel.text = "hello."
         imageView = 1
-        let imagePickerVC = UIImagePickerController()
-        imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
-        present(imagePickerVC, animated: true)
+        photopickerAlert()
     }
     
     @IBAction func secondButtonPressed(_ sender: Any)
     {
         imageView = 2
-        let imagePickerVC = UIImagePickerController()
-        imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
-        present(imagePickerVC, animated: true)
+        photopickerAlert()
     }
     
     @IBAction func thirdButtonPressed(_ sender: Any)
     {
         imageView = 3
-        let imagePickerVC = UIImagePickerController()
-        imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
-        present(imagePickerVC, animated: true)
+        photopickerAlert()
     }
     
     @IBAction func fourthButtonPressed(_ sender: Any)
     {
         imageView = 4
-        let imagePickerVC = UIImagePickerController()
-        imagePickerVC.sourceType = .photoLibrary
-        imagePickerVC.delegate = self
-        present(imagePickerVC, animated: true)
+        photopickerAlert()
     }
+    
+    func photopickerAlert()
+    {
+        let controller = UIAlertController(title: "Select photo from", message: "", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
+            let imagePickerVC = UIImagePickerController()
+            imagePickerVC.sourceType = .camera
+            imagePickerVC.delegate = self
+            self.present(imagePickerVC, animated: true)
+        }
+        
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { action in
+            let imagePickerVC = UIImagePickerController()
+            imagePickerVC.sourceType = .photoLibrary
+            imagePickerVC.delegate = self
+            self.present(imagePickerVC, animated: true)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        
+        controller.addAction(cameraAction)
+        controller.addAction(galleryAction)
+        controller.addAction(cancelAction)
+        present(controller, animated: true, completion: nil)
+    }
+    
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
@@ -126,6 +145,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func nextButtonPressed(_ sender: Any)
     {
         KRProgressHUD.show()
+        
         if fromHomeToImage {
             updateImages()
         } else {
@@ -142,17 +162,14 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
             let img1 = imageForMultipart(image: firstImage.image!, name: "IMG_1_Car_\(carid)")
             imagesArray.append(img1)
         }
-        
         if updatedImages[1] {
             let img1 = imageForMultipart(image: secondImage.image!, name: "IMG_2_Car_\(carid)")
             imagesArray.append(img1)
         }
-        
         if updatedImages[2] {
             let img1 = imageForMultipart(image: thirdImage.image!, name: "IMG_2_Car_\(carid)")
             imagesArray.append(img1)
         }
-        
         if updatedImages[3] {
             let img1 = imageForMultipart(image: fourthImage.image!, name: "IMG_4_Car_\(carid)")
             imagesArray.append(img1)
@@ -170,9 +187,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
                 
                 if imagesResponse?.count ?? 0 > 0 {
                     
-                    for response in imagesResponse ?? []
-                    {
-                        print(response.stringValue)
+                    for response in imagesResponse ?? [] {
                         imagesArray.append(response.stringValue)
                     }
                     
@@ -194,10 +209,6 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate, U
                 } else {
                     DataManager.Alertbox(message: response?["message"].stringValue ?? "please try again", vc: self)
                 }
-
-//                if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllowLocationServicesVC") as? AllowLocationServicesVC {
-//                    self.navigationController?.pushViewController(controller, animated: true)
-//                }
             }
         }
     }

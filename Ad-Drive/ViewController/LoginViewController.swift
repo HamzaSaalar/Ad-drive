@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameField.text = "qasim6@gmail.com"
-        passwordField.text = "123123123"
+//        userNameField.text = "qasim6@gmail.com"
+//        passwordField.text = "123123123"
     }
 
     
@@ -44,8 +44,9 @@ class LoginViewController: UIViewController {
 //            KRProgressHUD.showMessage("Please wait ...")
             ApiServices.CalAPIResponse(url: Endpoints.login, param: params, method: .post)
             { responseVaue, successval, errorval, statusCode in
+                KRProgressHUD.dismiss()
                 if successval ?? false {
-                    KRProgressHUD.dismiss()
+                    
                     print(responseVaue as Any)
                     if let dataobj = Mapper<LoginResponseModel>().map(JSONObject: responseVaue?.rawValue)
                     {
@@ -125,7 +126,7 @@ class LoginViewController: UIViewController {
         }
         if passwordField.isSecureTextEntry {
 //            showHideButton.setImage(UIImage(systemName: "eye.slash") , for: .normal)
-            showHideButton.setImage(UIImage.init(named: "eye.slash"), for: .normal)
+            showHideButton.setImage(UIImage.init(named: "Hide"), for: .normal)
         } else {
             showHideButton.setImage(UIImage.init(named: "eye"), for: .normal)
         }

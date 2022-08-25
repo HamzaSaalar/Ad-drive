@@ -42,7 +42,13 @@ class SplashVC: UIViewController {
             } catch {
                 print("erroMsg")
             }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                self.navigateUserToAppropriateScreen()
+            }
+            return
         }
+        
         if isAppStarted {
             // if not contain images then image screen //
             if imagescreen {
